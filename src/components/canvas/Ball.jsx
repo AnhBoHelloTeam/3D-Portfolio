@@ -68,4 +68,8 @@ BallCanvas.propTypes = {
   icons: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
+BallCanvas.defaultProps = {
+  icons: [],
+};
+
 export default BallCanvas;

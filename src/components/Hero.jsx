@@ -5,12 +5,12 @@ import { ComputersCanvas, BallCanvas } from "./canvas";
 
 const Hero = () => {
   const icons = [
-    "icon1.png",
-    "icon2.png",
-    "icon3.png",
-    "icon4.png",
-    "icon5.png",
-    "icon6.png",
+    "/icons/icon1.png",
+    "/icons/icon2.png",
+    "/icons/icon3.png",
+    "/icons/icon4.png",
+    "/icons/icon5.png",
+    "/icons/icon6.png",
   ];
 
   return (
