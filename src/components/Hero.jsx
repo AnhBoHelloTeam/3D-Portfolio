@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
-
+import { technologies } from "../constants";
 import { styles } from "../styles";
 import { ComputersCanvas, BallCanvas } from "./canvas";
 
 const Hero = () => {
-  const icons = [
-    "/icons/icon1.png",
-    "/icons/icon2.png",
-    "/icons/icon3.png",
-    "/icons/icon4.png",
-    "/icons/icon5.png",
-    "/icons/icon6.png",
-  ];
+  const icons = technologies.map((tech) => tech.icon);
 
   return (
     <section className={`relative w-full h-screen mx-auto`}>
