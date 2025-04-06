@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas, BallCanvas } from "./canvas";
 
 const Hero = () => {
+  const icons = [
+    "icon1.png",
+    "icon2.png",
+    "icon3.png",
+    "icon4.png",
+    "icon5.png",
+    "icon6.png",
+  ];
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -26,6 +35,10 @@ const Hero = () => {
       </div>
 
       <ComputersCanvas />
+
+      <div className="absolute top-[400px] w-full flex justify-center items-center">
+        <BallCanvas icons={icons} />
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
