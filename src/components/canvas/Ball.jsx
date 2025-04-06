@@ -44,7 +44,7 @@ Ball.propTypes = {
   imgUrl: PropTypes.string.isRequired,
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icons }) => {
   return (
     <Canvas
       frameloop="demand"
@@ -53,7 +53,9 @@ const BallCanvas = ({ icon }) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        {icons.map((icon, index) => (
+          <Ball key={index} imgUrl={icon} />
+        ))}
       </Suspense>
       <Preload all />
     </Canvas>
@@ -61,7 +63,7 @@ const BallCanvas = ({ icon }) => {
 };
 
 BallCanvas.propTypes = {
-  icon: PropTypes.string.isRequired,
+  icons: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default BallCanvas;
