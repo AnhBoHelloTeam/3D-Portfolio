@@ -7,6 +7,8 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import gitImage from "../assets/tech/git.png";
+import linkedInImage from "../assets/tech/linkedin.png";
+import resumeImage from "../assets/tech/resume.png";
 
 const Contact = () => {
   const formRef = useRef();
@@ -124,7 +126,7 @@ const Contact = () => {
         </form>
         <div className="mt-8 flex gap-4 items-center">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/Abej-Rijwi"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white font-medium"
@@ -133,16 +135,12 @@ const Contact = () => {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://www.linkedin.com/in/abej-rijwi"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white font-medium"
           >
-            <img
-              src="/src/assets/tech/git.png"
-              alt="LinkedIn"
-              className="w-10 h-10"
-            />
+            <img src={linkedInImage} alt="LinkedIn" className="w-10 h-10" />
             LinkedIn
           </a>
           <a
@@ -151,12 +149,8 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white font-medium"
           >
-            <img
-              src="/src/assets/tech/redux.png"
-              alt="LinkedIn"
-              className="w-10 h-10"
-            />
-            Docker
+            <img src={resumeImage} alt="LinkedIn" className="w-10 h-10" />
+            Resume
           </a>
         </div>
       </motion.div>
