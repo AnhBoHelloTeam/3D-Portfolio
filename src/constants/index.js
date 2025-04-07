@@ -27,6 +27,8 @@ import {
   self,
   threads,
   aditya,
+  santosh,
+  school,
 } from "../assets";
 
 export const navLinks = [
@@ -177,27 +179,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to create a website that could truly match the beauty of our product, but Rick proved me wrong. The website he designed not only captures the essence of our brand but enhances it in ways I didn’t think were possible. It’s truly a work of art.",
+      "I thought it was impossible to create a website that could truly match the beauty of our product, but Abej proved me wrong. The website he designed not only captures the essence of our brand but enhances it in ways I didn’t think were possible. It’s truly a work of art.",
     name: "Santosh Sing",
     designation: "CFO",
     company: "Jindalco Metal",
+    image: santosh,
+  },
+  {
+    testimonial:
+      "I've never worked with a web developer who is as genuinely invested in their clients' success as Abej. He goes above and beyond to ensure not just a beautiful website, but one that truly drives results. His dedication is unmatched.",
+    name: "Aditya Kumar",
+    designation: "SE",
+    company: "CSM Technologies",
     image: aditya,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: aditya,
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+      "Abej is unlike any web developer I’ve ever worked with. He truly cares about his clients' success, going the extra mile to create a website that not only looks amazing but also helps our business thrive. His commitment and attention to detail are exceptional.",
+    name: "Chandan Singh",
     designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    company: "Mount Carmel School",
+    image: school,
   },
 ];
 

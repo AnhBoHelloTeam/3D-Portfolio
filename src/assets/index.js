@@ -1,11 +1,12 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+
+import backend from "./services/backend.png";
+import creator from "./services/creator.png";
+import mobile from "./services/mobile.png";
+import web from "./services/web.png";
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -29,12 +30,10 @@ import paypines from "./company/paypines.png";
 import self from "./company/self.png";
 
 import aditya from "./testimonials/aditya.png";
+import santosh from "./testimonials/santosh.png";
+import school from "./testimonials/school.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-
-import threads from "./threads.png";
+import threads from "./projects/threads.png";
 
 export {
   logo,
@@ -69,4 +68,6 @@ export {
   self,
   threads,
   aditya,
+  santosh,
+  school,
 };
