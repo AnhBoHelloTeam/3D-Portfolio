@@ -8,17 +8,10 @@ import creator from "./services/creator.png";
 import mobile from "./services/mobile.png";
 import web from "./services/web.png";
 
-import css from "./tech/css.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import appwrite from "./tech/appwrite.png";
 import php from "./tech/php.png";
 import nextjs from "./tech/nextjs.png";
 
@@ -44,20 +37,10 @@ export {
   github,
   menu,
   close,
-  css,
-  git,
-  html,
   javascript,
-  mongodb,
   nodejs,
   reactjs,
-  redux,
-  tailwind,
   typescript,
-  carrent,
-  jobit,
-  tripguide,
-  appwrite,
   php,
   nextjs,
   cogent,
