@@ -25,6 +25,7 @@ import {
   innovovision,
   paypines,
   self,
+  threads,
 } from "../assets";
 
 export const navLinks = [
@@ -218,8 +219,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: threads,
+    source_code_link: "https://github.com/Abej-Rijwi/threads",
   },
   {
     name: "Job IT",

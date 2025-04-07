@@ -31,6 +31,7 @@ import self from "./company/self.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import threads from "./threads.png";
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   innovovision,
   paypines,
   self,
+  threads,
 };
