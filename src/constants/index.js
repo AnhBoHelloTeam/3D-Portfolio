@@ -201,21 +201,25 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Threads Application",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Build a full stack Threads clone using Next.js 14+ with a redesigned look transformed from a Figma design, user interaction to community management, technical implementation, and various features, including nested deep comments, notifications, real-time-search, and more",
     tags: [
       {
-        name: "react",
+        name: "NEXT JS",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "MONGODB",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "TAILWIND CSS",
         color: "pink-text-gradient",
+      },
+      {
+        name: "TYPESCRIPT",
+        color: "yellow-text-gradient",
       },
     ],
     image: carrent,
