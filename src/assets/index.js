@@ -28,9 +28,12 @@ import innovovision from "./company/innovovision.png";
 import paypines from "./company/paypines.png";
 import self from "./company/self.png";
 
+import aditya from "./testimonials/aditya.png";
+
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
 import threads from "./threads.png";
 
 export {
@@ -65,4 +68,5 @@ export {
   paypines,
   self,
   threads,
+  aditya,
 };
