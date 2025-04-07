@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import gitImage from "../assets/tech/git.png";
 
 const Contact = () => {
   const formRef = useRef();
@@ -128,11 +129,7 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-white font-medium"
           >
-            <img
-              src="/src/assets/tech/php.png"
-              alt="GitHub"
-              className="w-10 h-10"
-            />
+            <img src={gitImage} alt="GitHub" className="w-10 h-10" />
             GitHub
           </a>
           <a

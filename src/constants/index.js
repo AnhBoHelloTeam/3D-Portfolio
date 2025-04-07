@@ -176,7 +176,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never worked with a web developer who is as genuinely invested in their clients' success as Abej. He goes above and beyond to ensure not just a beautiful website, but one that truly drives results. His dedication is unmatched.",
+      "I've never worked with a web developer who is as genuinely invested in their clients' success as Abej. He goes above and beyond to ensure not just a beautiful website, but one that truly drives results. His dedication is unmatched from another designer and developer.",
     name: "Aditya Kumar",
     designation: "SE",
     company: "CSM Technologies",
@@ -184,7 +184,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "Abej is unlike any web developer I’ve ever worked with. He truly cares about his clients' success, going the extra mile to create a website that not only looks amazing but also helps our business thrive. His commitment and attention to detail are exceptional.",
+      "Abej is unlike any web developer I’ve ever worked with. He truly cares about his clients' success, going the extra mile to create a website that not only looks amazing but also helps our business thrive. His commitment and attention to detail are exceptional with client.",
     name: "Chandan Singh",
     designation: "CTO",
     company: "Mount Carmel School",
