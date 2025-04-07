@@ -217,10 +217,6 @@ const projects = [
         name: "TAILWIND CSS",
         color: "pink-text-gradient",
       },
-      {
-        name: "TYPESCRIPT",
-        color: "yellow-text-gradient",
-      },
     ],
     image: carrent,
     source_code_link: "https://github.com/",
