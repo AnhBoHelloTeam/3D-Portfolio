@@ -206,15 +206,15 @@ const projects = [
       "Build a full stack Threads clone using Next.js 14+ with a redesigned look transformed from a Figma design, user interaction to community management, technical implementation, and various features, including nested deep comments, notifications, real-time-search, and more",
     tags: [
       {
-        name: "NEXT JS",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "MONGODB",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "TAILWIND CSS",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
