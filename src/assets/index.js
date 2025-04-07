@@ -26,6 +26,7 @@ import adacell from "./company/adacell.png";
 import fillip from "./company/fillip.png";
 import innovovision from "./company/innovovision.png";
 import paypines from "./company/paypines.png";
+import self from "./company/self.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -61,4 +62,5 @@ export {
   fillip,
   innovovision,
   paypines,
+  self,
 };

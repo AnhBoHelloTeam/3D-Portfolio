@@ -24,6 +24,7 @@ import {
   fillip,
   innovovision,
   paypines,
+  self,
 } from "../assets";
 
 export const navLinks = [
@@ -84,6 +85,21 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Freelance Full Stack Engineer",
+    company_name: "Self Employed",
+    icon: self,
+    iconBg: "#E6DEDD",
+    date: "April 2022 - Present",
+    points: [
+      "File-based Routing to simplify navigation and ensure scalability across different application pages.",
+      "Ensured that web applications were fully responsive across a range of devices and screen sizes, using modern CSS frameworks like Tailwind CSS, Shadcn-UI and Material-UI for styling and design consistency.",
+      "Developed RESTful APIs and integrated GraphQL APIs to handle dynamic data requests between the front-end and back-end. By using Node.js, I ensured that these APIs were scalable, modular, and easy to maintain.",
+      "Integrated NextAuth.js and Clerk into Next.js applications for seamless authentication and user management. Leveraged built-in authentication providers (Google, GitHub, etc.) and custom email/password authentication for user login.",
+      "Collaborated with design teams to translate static designs into functional, interactive user interfaces using React.js and Next.js. By leveraging reusable components, I maintained a consistent design language across the application, enhancing both usability and user experience.",
+      "Implemented server-side rendering (SSR) in Next.js to optimize page load times and improve SEO, ensuring that web pages are indexed efficiently by search engines. Additionally, I used static site generation (SSG) to pre-render pages at build time for faster delivery and enhanced performance.",
+    ],
+  },
   {
     title: "PHP Developer",
     company_name: "PayPines Financial Services",
