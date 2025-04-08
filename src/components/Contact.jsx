@@ -77,47 +77,53 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
-        <div className="mt-8 flex flex-row gap-6 justify-center">
+        <div className="mt-8 flex flex-wrap gap-6 justify-center">
+          {/* GitHub Link */}
           <a
             href="https://github.com/Abej-Rijwi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg"
+            className="flex flex-col items-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"
           >
             <img
               src={gitImage}
               alt="GitHub"
-              className="w-12 h-12 rounded-full shadow-md"
+              className="w-8 h-10 rounded-full shadow-md"
             />
             <span className="text-xl">GitHub</span>
           </a>
+
+          {/* LinkedIn Link */}
           <a
             href="https://www.linkedin.com/in/abej-rijwi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg"
+            className="flex flex-col items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"
           >
             <img
               src={linkedInImage}
               alt="LinkedIn"
-              className="w-12 h-12 rounded-full shadow-md"
+              className="w-8 h-10 rounded-full shadow-md"
             />
             <span className="text-xl">LinkedIn</span>
           </a>
+
+          {/* Resume Link */}
           <a
-            href="https://www.example.com/resume.pdf"
+            href="https://www.example.com/resume.pdf" // Replace with your actual resume URL
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center gap-2 px-6 py-4 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg"
+            className="flex flex-col items-center gap-2 px-4 py-3 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"
           >
             <img
               src={resumeImage}
               alt="Resume"
-              className="w-12 h-12 rounded-full shadow-md"
+              className="w-8 h-10 rounded-full shadow-md"
             />
             <span className="text-xl">Resume</span>
           </a>
         </div>
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
