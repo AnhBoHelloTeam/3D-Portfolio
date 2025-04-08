@@ -135,7 +135,7 @@ const Contact = () => {
             <img
               src={gitImage}
               alt="GitHub"
-              className="w-12 h-12 rounded-full shadow-md"
+              className="w-8 h-10 rounded-full shadow-md"
             />
             <span className="text-xl">GitHub</span>
           </a>
@@ -150,7 +150,7 @@ const Contact = () => {
             <img
               src={linkedInImage}
               alt="LinkedIn"
-              className="w-12 h-12 rounded-full shadow-md"
+              className="w-8 h-10 rounded-full shadow-md"
             />
             <span className="text-xl">LinkedIn</span>
           </a>
@@ -165,7 +165,7 @@ const Contact = () => {
             <img
               src={resumeImage}
               alt="Resume"
-              className="w-12 h-12 rounded-full shadow-md"
+              className="w-8 h-10 rounded-full shadow-md"
             />
             <span className="text-xl">Resume</span>
           </a>
