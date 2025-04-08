@@ -83,6 +83,10 @@ const technologies = [
     name: "nextjs",
     icon: nextjs,
   },
+  {
+    name: "nextjs",
+    icon: nextjs,
+  },
 ];
 
 const experiences = [
