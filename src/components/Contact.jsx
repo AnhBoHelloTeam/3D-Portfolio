@@ -124,7 +124,7 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        <div className="mt-8 flex flex-col gap-6 items-center">
+        <div className="mt-8 flex flex-row gap-6 justify-center">
           {/* GitHub Link */}
           <a
             href="https://github.com/Abej-Rijwi"
