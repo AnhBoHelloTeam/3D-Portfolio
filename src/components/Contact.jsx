@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import gitImage from "../assets/tech/git.png";
+import gitImage from "../assets/tech/github.png";
 import linkedInImage from "../assets/tech/linkedin.png";
 import resumeImage from "../assets/tech/resume.png";
 
@@ -124,33 +124,50 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        <div className="mt-8 flex gap-4 items-center">
+        <div className="mt-8 flex gap-6 items-center">
+          {/* GitHub Link */}
           <a
             href="https://github.com/Abej-Rijwi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white font-medium"
+            className="flex items-center gap-3 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
           >
-            <img src={gitImage} alt="GitHub" className="w-10 h-10" />
-            GitHub
+            <img
+              src={gitImage}
+              alt="GitHub"
+              className="w-10 h-10 rounded-full shadow-md"
+            />
+            <span className="text-lg">GitHub</span>
           </a>
+
+          {/* LinkedIn Link */}
           <a
             href="https://www.linkedin.com/in/abej-rijwi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white font-medium"
+            className="flex items-center gap-3 px-4 py-2 bg-blue-800 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
           >
-            <img src={linkedInImage} alt="LinkedIn" className="w-10 h-10" />
-            LinkedIn
+            <img
+              src={linkedInImage}
+              alt="LinkedIn"
+              className="w-10 h-10 rounded-full shadow-md"
+            />
+            <span className="text-lg">LinkedIn</span>
           </a>
+
+          {/* Resume Link */}
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://www.example.com/resume.pdf" // Replace with your actual resume URL
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white font-medium"
+            className="flex items-center gap-3 px-4 py-2 bg-green-800 hover:bg-green-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
           >
-            <img src={resumeImage} alt="LinkedIn" className="w-10 h-10" />
-            Resume
+            <img
+              src={resumeImage}
+              alt="Resume"
+              className="w-10 h-10 rounded-full shadow-md"
+            />
+            <span className="text-lg">Resume</span>
           </a>
         </div>
       </motion.div>
