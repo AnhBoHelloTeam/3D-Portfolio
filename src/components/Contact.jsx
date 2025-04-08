@@ -124,20 +124,20 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-        <div className="mt-8 flex gap-6 items-center">
+        <div className="mt-8 flex flex-col gap-6 items-center">
           {/* GitHub Link */}
           <a
             href="https://github.com/Abej-Rijwi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
+            className="flex flex-col items-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg"
           >
             <img
               src={gitImage}
               alt="GitHub"
-              className="w-10 h-10 rounded-full shadow-md"
+              className="w-12 h-12 rounded-full shadow-md"
             />
-            <span className="text-lg">GitHub</span>
+            <span className="text-xl">GitHub</span>
           </a>
 
           {/* LinkedIn Link */}
@@ -145,14 +145,14 @@ const Contact = () => {
             href="https://www.linkedin.com/in/abej-rijwi"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-2 bg-blue-800 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
+            className="flex flex-col items-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg"
           >
             <img
               src={linkedInImage}
               alt="LinkedIn"
-              className="w-10 h-10 rounded-full shadow-md"
+              className="w-12 h-12 rounded-full shadow-md"
             />
-            <span className="text-lg">LinkedIn</span>
+            <span className="text-xl">LinkedIn</span>
           </a>
 
           {/* Resume Link */}
@@ -160,14 +160,14 @@ const Contact = () => {
             href="https://www.example.com/resume.pdf" // Replace with your actual resume URL
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-2 bg-green-800 hover:bg-green-700 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
+            className="flex flex-col items-center gap-2 px-6 py-4 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg"
           >
             <img
               src={resumeImage}
               alt="Resume"
-              className="w-10 h-10 rounded-full shadow-md"
+              className="w-12 h-12 rounded-full shadow-md"
             />
-            <span className="text-lg">Resume</span>
+            <span className="text-xl">Resume</span>
           </a>
         </div>
       </motion.div>
