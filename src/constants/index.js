@@ -88,7 +88,7 @@ const technologies = [
 const experiences = [
   {
     title: "Freelance Full Stack Engineer",
-    company_name: "Self Employed",
+    company_name: "Freelance",
     icon: self,
     iconBg: "#E6DEDD",
     date: "April 2022 - Present",
