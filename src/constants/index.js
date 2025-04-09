@@ -226,7 +226,7 @@ const projects = [
   {
     name: "Health Application",
     description:
-      "Building a healthcare platform that streamlines patient registration, appointment scheduling, medical record management, complex forms, and SMS notifications is a large-scale project that involves both front-end and back-end components, integration with third-party services, and security measures to protect data.",
+      "Building a healthcare platform that streamlines patient registration, appointment scheduling, medical record management, complex forms, and SMS notifications is a large-scale project that involves both front-end and back-end components, integration with third-party services, and security measures to protect sensitive health data.",
     tags: [
       {
         name: "nextjs",
