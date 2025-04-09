@@ -15,6 +15,7 @@ import {
   paypines,
   self,
   threads,
+  healthcare,
   aditya,
   santosh,
   school,
@@ -244,7 +245,7 @@ const projects = [
         color: "yellow-text-gradient",
       },
     ],
-    image: threads,
+    image: healthcare,
     source_code_link: "https://github.com/Abej-Rijwi/healthcare",
   },
 ];

@@ -27,6 +27,7 @@ import santosh from "./testimonials/santosh.png";
 import school from "./testimonials/school.png";
 
 import threads from "./projects/threads.png";
+import healthcare from "./projects/healthcare.png";
 
 export {
   logo,
@@ -50,6 +51,7 @@ export {
   paypines,
   self,
   threads,
+  healthcare,
   aditya,
   santosh,
   school,
