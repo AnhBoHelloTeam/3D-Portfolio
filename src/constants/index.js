@@ -148,7 +148,7 @@ const experiences = [
     company_name: "Adacell Technology",
     icon: adacell,
     iconBg: "#E6DEDD",
-    date: "April 2017 - January-2018",
+    date: "April 2017 - January 2018",
     points: [
       "The radio transmitter, receiver and transceiver were installed and tested for proper functioning.",
       "Aligned with project budgets to minimize costs and delays, meeting timely deadlines and quality standards.",
@@ -204,7 +204,7 @@ const projects = [
   {
     name: "Threads Application",
     description:
-      "Build a full stack Threads clone using Next.js 14+ with a redesigned look transformed from a Figma design, user interaction to community management, technical implementation, and various features, including nested deep comments, notifications, real-time-search, and more",
+      "Building a full-stack clone of Threads (a social media platform) with Next.js 14+ involves several stages, including user interface design, backend API development, real-time features, user authentication, notifications, and community management. The platform should support various features like nested comments, real-time search, and notifications.",
     tags: [
       {
         name: "nextjs",
@@ -221,6 +221,31 @@ const projects = [
     ],
     image: threads,
     source_code_link: "https://github.com/Abej-Rijwi/threads",
+  },
+  {
+    name: "Healthcare Application",
+    description:
+      "Building a healthcare platform that streamlines patient registration, appointment scheduling, medical record management, complex forms, and SMS notifications is a large-scale project that involves both front-end and back-end components, integration with third-party services, and security measures to protect sensitive health data.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "appwrite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: threads,
+    source_code_link: "https://github.com/Abej-Rijwi/healthcare",
   },
 ];
 
