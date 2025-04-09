@@ -28,6 +28,7 @@ import school from "./testimonials/school.png";
 
 import threads from "./projects/threads.png";
 import healthcare from "./projects/healthcare.png";
+import portfolio from "./projects/portfolio.png";
 
 export {
   logo,
@@ -52,6 +53,7 @@ export {
   self,
   threads,
   healthcare,
+  portfolio,
   aditya,
   santosh,
   school,

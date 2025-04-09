@@ -16,6 +16,7 @@ import {
   self,
   threads,
   healthcare,
+  portfolio,
   aditya,
   santosh,
   school,
@@ -243,6 +244,27 @@ const projects = [
     ],
     image: healthcare,
     source_code_link: "https://github.com/Abej-Rijwi/healthcare",
+  },
+  {
+    name: "Portfolio Application",
+    description:
+      "Building a personal portfolio website with react.js and three.js involves creating a visually appealing and responsive design that showcases your skills, projects, and experiences. The website should include sections for an introduction, project showcases, testimonials, and contact information.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/Abej-Rijwi/portfolio",
   },
 ];
 
