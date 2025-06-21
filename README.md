@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://www.youtube.com/@JavaScriptTutorialFamily" target="_blank">
+    <a href="https://youtu.be/V05mQSEQ9jQ" target="_blank">
       <img src="https://github.com/adrianhajdin/project_3D_developer_portfolio/assets/151519281/4722160a-8e61-403f-a905-728feae1f7e6" alt="Project Banner">
     </a>
   <br />
@@ -14,7 +14,7 @@
   <h3 align="center">A 3D Developer Portfolio</h3>
 
    <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@JavaScriptTutorialFamily" target="_blank"><b>JavaScript Tutorial</b></a> YouTube. Join the JST family!
+     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/channel/UChz-VlXINivlDUpeOz9v5kg" target="_blank"><b>JavaScript Tutorial</b></a> YouTube. Join the JST family!
     </div>
 </div>
 
@@ -30,11 +30,11 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@JavaScriptTutorialFamily" target="_blank"><b>JavaScript Tutorial</b></a>.
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/channel/UChz-VlXINivlDUpeOz9v5kg" target="_blank"><b>JavaScript Tutorial</b></a>.
 
 If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
 
-<a href="https://www.youtube.com/@JavaScriptTutorialFamily" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+<a href="https://youtu.be/V05mQSEQ9jQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
 
 ## <a name="introduction">🤖 Introduction</a>
 
