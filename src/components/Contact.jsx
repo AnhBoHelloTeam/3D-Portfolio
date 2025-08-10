@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -37,22 +37,20 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_hbop7xp",
-        "template_464nzhb",
+        "service_na7idoi", // Service ID
+        "template_76pkajm", // Template ID
         {
-          form_name: form.name,
-          to_name: "JavaScript Tutorial Family",
-          from_email: form.email,
-          to_email: "nhanhateku1@gmail.com",
-          message: form.message,
+          name: form.name,        // Phải khớp với {{name}} trong template
+          email: form.email,      // Phải khớp với {{email}} trong template
+          message: form.message,  // Phải khớp với {{message}} trong template
+          to_email: "nhanhateku1@gmail.com",  // Email nhận
         },
-        "r1dk6_F-NXVzxgnWX"
+        "r1dk6_F-NXVzxgnWX"  // Public Key
       )
       .then(
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm({
             name: "",
             email: "",
@@ -61,7 +59,6 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-
           console.log(error);
           alert("Something went wrong. Please try again later.");
         }

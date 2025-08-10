@@ -205,6 +205,7 @@ const projects = [
     ],
     image: badnhan,
     source_code_link: "https://github.com/AnhBoHelloTeam/3D-Portfolio.git",
+    live_demo_link: "https://nhanngfolio.onrender.com/",
   },
   {
     name: "NhanNG | Portfolio Application",
@@ -226,6 +227,7 @@ const projects = [
     ],
     image: nhanprofolio,
     source_code_link: "https://github.com/AnhBoHelloTeam/NhanNGFolio",
+    live_demo_link: "https://nhanngfolio.onrender.com/",
   },
   {
     name: "Souvenir E-commerce Website",
@@ -251,6 +253,7 @@ const projects = [
     ],
     image: Souvenir,
     source_code_link: "https://github.com/AnhBoHelloTeam/FE-NhanShopLuuNiem.git",
+    live_demo_link: "https://fe-webdoluuniem.onrender.com/",
   },
   {
     name: "React Web Shop",
@@ -272,6 +275,7 @@ const projects = [
     ],
     image: elecWeb,
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_REACT.git",
+    live_demo_link: "https://shop-frontend-8yko.onrender.com/",
   },
   {
     name: "Flutter Mobile App",
@@ -293,6 +297,7 @@ const projects = [
     ],
     image: elecAppP,
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_Flutter.git",
+    live_demo_link: "https://shop-flutter-1c992.firebaseapp.com/",
   },
   
   {
@@ -315,6 +320,7 @@ const projects = [
     ],
     image: APITruyen,
     source_code_link: "https://github.com/AnhBoHelloTeam/ReactAPIReadTruyenNhanNG.git",
+    live_demo_link: "https://reactapireadtruyennhanng.onrender.com/",
   },
   {
     name: "Fast Food Web App",
@@ -336,6 +342,7 @@ const projects = [
     ],
     image: FastfoodWeb,
     source_code_link: "https://github.com/AnhBoHelloTeam/fastfood-app_NetJS_fontent.git",
+    live_demo_link: "https://fastfood-app-netjs-fontent.onrender.com/",
   },
 ];
 

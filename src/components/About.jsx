@@ -45,9 +45,9 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify break-all"
+        className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px] text-justify break-all"
       >
-        I'm a passionate IT student with a love for coding and problem-solving.
+        I'm a passionate IT student with a love for coding and problem-solving.<br></br>
         I started by exploring how software shapes our world through self-learning and projects, from web apps to backend systems.
         Skilled in C++, Node.js, Spring Boot, Python, Django, and currently learning Flutter & NestJS, I enjoy turning ideas into functional solutions.
         I’ve built personal projects, provided technical support at DongA University, and managed SEO for a local business, gaining real-world experience.

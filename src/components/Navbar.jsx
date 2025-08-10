@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import fullstackpdf from "../assets/fullstack.pdf"; // Import file PDF
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -61,6 +62,22 @@ const Navbar = () => {
               <a href={nav.url || `#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li
+            className={`${
+              active === "Download CV" ? "text-white" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer`}
+            onClick={() => {
+              setActive("Download CV");
+              const link = document.createElement("a");
+              link.href = fullstackpdf;
+              link.download = "fullstack.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
+            Download CV
+          </li>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -91,6 +108,23 @@ const Navbar = () => {
                   <a href={nav.url || `#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === "Download CV" ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("Download CV");
+                  const link = document.createElement("a");
+                  link.href = fullstackpdf;
+                  link.download = "fullstack.pdf";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                Download CV
+              </li>
             </ul>
           </div>
         </div>
