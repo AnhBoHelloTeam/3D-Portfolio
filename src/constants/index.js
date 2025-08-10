@@ -8,22 +8,21 @@ import {
   reactjs,
   nodejs,
   nextjs,
-  cogent,
-  adacell,
-  fillip,
-  innovovision,
-  paypines,
   self,
   Souvenir,
-  healthcare,
-  portfolio,
-  aditya,
-  santosh,
-  school,
   elecWeb,
   elecAppP,
   FastfoodWeb,
   APITruyen,
+  Logo,
+  Nhan,
+  nhan2,
+  nhanprofolio,
+  badnhan,
+  Upwork,
+  ICT,
+  CN,
+  cowi,
 } from "../assets";
 
 export const navLinks = [
@@ -95,7 +94,7 @@ const experiences = [
   {
     title: "Automation & Workflow Assistant (N8N)",
     company_name: "COWI Autobiz",
-    icon: self,
+    icon: cowi,
     iconBg: "#E6DEDD",
     date: "June 2025 - Present",
     points: [
@@ -108,7 +107,7 @@ const experiences = [
   {
     title: "Freelance Web/Mobile Developer",
     company_name: "Independent Contractor",
-    icon: innovovision,
+    icon: Upwork,
     iconBg: "#E6DEDD",
     date: "May 2025 - Present",
     points: [
@@ -121,7 +120,7 @@ const experiences = [
   {
     title: "Junior Full Stack Developer",
     company_name: "ICT Đông Á",
-    icon: paypines,
+    icon: ICT,
     iconBg: "#E6DEDD",
     date: "May 2025 - August 2025",
     points: [
@@ -135,7 +134,7 @@ const experiences = [
   {
     title: "IT Support Assistant (Part-time)",
     company_name: "Independent Contractor",
-    icon: fillip,
+    icon: self,
     iconBg: "#E6DEDD",
     date: "Dec 2022 - Nov 2024",
     points: [
@@ -147,7 +146,7 @@ const experiences = [
   {
     title: "Sales Consultant & Technical Support",
     company_name: "Chinh Nguyen Computer",
-    icon: adacell,
+    icon: CN,
     iconBg: "#E6DEDD",
     date: "Sep 2022 - Nov 2024",
     points: [
@@ -162,18 +161,18 @@ const testimonials = [
   {
     testimonial:
       "Nhan was a great help in our automation project. Even though he is still a student, he quickly learned how to use n8n and contributed to setting up workflows that saved us a lot of time. He is eager to learn and easy to work with.",
-    name: "Cong He Thong",
+    name: "Anh Bo",
     designation: "Project Manager",
     company: "COWI Autobiz",
-    image: santosh,
+    image: Logo,
   },
   {
     testimonial:
       "During the development of our souvenir e-commerce platform, Nhan was responsible for several key features like the chat system and real-time notifications. He was always ready to take feedback and improve the work. His enthusiasm made the project move forward smoothly.",
-    name: "Duc Manh",
+    name: "NhanNG",
     designation: "Team Leader",
     company: "ICT Đông Á",
-    image: aditya,
+    image: Nhan,
   },
   {
     testimonial:
@@ -181,11 +180,53 @@ const testimonials = [
     name: "Sarah Williams",
     designation: "Owner",
     company: "Freelance Client (Upwork)",
-    image: school,
+    image: nhan2,
   },
 ];
 
 const projects = [
+  {
+    name: "NhanNG | 3D Portfolio Application",
+    description:
+      "Building a personal portfolio website with react.js and three.js involves creating a visually appealing and responsive design that showcases your skills, projects, and experiences. The website should include sections for an introduction, project showcases, testimonials, and contact information. 3D graphics design  for amazing view using threejs.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: badnhan,
+    source_code_link: "https://github.com/AnhBoHelloTeam/3D-Portfolio.git",
+  },
+  {
+    name: "NhanNG | Portfolio Application",
+    description:
+      "A modern, minimalist yet functional personal profile page using React and static CSS. The site showcases skills, featured projects, and contact information, providing a smooth experience on all devices. Integrated SEO for increased search engine visibility.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: nhanprofolio,
+    source_code_link: "https://github.com/AnhBoHelloTeam/NhanNGFolio",
+  },
   {
     name: "Souvenir E-commerce Website",
     description:
@@ -253,27 +294,7 @@ const projects = [
     image: elecAppP,
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_Flutter.git",
   },
-  {
-    name: "Fast Food Web App",
-    description:
-      "A food ordering platform built with NestJS, React, and MySQL. Includes menu browsing, order placement, price calculation, and order tracking. Designed for restaurants to manage online orders efficiently.",
-    tags: [
-      {
-        name: "nestjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: FastfoodWeb,
-    source_code_link: "https://github.com/AnhBoHelloTeam/fastfood-app_NetJS_fontent.git",
-  },
+  
   {
     name: "React API Read Comics",
     description:
@@ -296,25 +317,25 @@ const projects = [
     source_code_link: "https://github.com/AnhBoHelloTeam/ReactAPIReadTruyenNhanNG.git",
   },
   {
-    name: "NhanNG | Portfolio Application",
+    name: "Fast Food Web App",
     description:
-      "Building a personal portfolio website with react.js and three.js involves creating a visually appealing and responsive design that showcases your skills, projects, and experiences. The website should include sections for an introduction, project showcases, testimonials, and contact information. 3D graphics design  for amazing view using threejs.",
+      "A food ordering platform built with NestJS, React, and MySQL. Includes menu browsing, order placement, price calculation, and order tracking. Designed for restaurants to manage online orders efficiently.",
     tags: [
       {
-        name: "reactjs",
+        name: "nestjs",
         color: "blue-text-gradient",
       },
       {
-        name: "threejs",
+        name: "react",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mysql",
         color: "pink-text-gradient",
       },
     ],
-    image: portfolio,
-    source_code_link: "https://github.com/AnhBoHelloTeam/3D-Portfolio.git",
+    image: FastfoodWeb,
+    source_code_link: "https://github.com/AnhBoHelloTeam/fastfood-app_NetJS_fontent.git",
   },
 ];
 

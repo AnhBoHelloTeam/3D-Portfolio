@@ -47,14 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify break-all"
       >
-I'm a passionate IT student with a love for coding and problem-solving.
-I started by exploring how software shapes our world through self-learning and projects, from web apps to backend systems.
-Skilled in C++, Node.js, Spring Boot, Python, Django, and currently learning Flutter & NestJS, I enjoy turning ideas into functional solutions.
-I’ve built personal projects, provided technical support at DongA University, and managed SEO for a local business, gaining real-world experience.
-I’m seeking internship or job opportunities in Da Nang as a fullstack developer.
-Contact: nhanng.thdhk4@gmail.com – Let’s build something amazing!      
+        I'm a passionate IT student with a love for coding and problem-solving.
+        I started by exploring how software shapes our world through self-learning and projects, from web apps to backend systems.
+        Skilled in C++, Node.js, Spring Boot, Python, Django, and currently learning Flutter & NestJS, I enjoy turning ideas into functional solutions.
+        I’ve built personal projects, provided technical support at DongA University, and managed SEO for a local business, gaining real-world experience.
+        I’m seeking internship or job opportunities in Da Nang as a fullstack developer.
+        Contact: nhanng.thdhk4@gmail.com – Let’s build something amazing!      
       </motion.p>
-
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

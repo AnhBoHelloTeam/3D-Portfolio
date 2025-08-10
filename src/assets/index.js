@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -15,24 +15,23 @@ import typescript from "./tech/typescript.png";
 import php from "./tech/php.png";
 import nextjs from "./tech/nextjs.png";
 
-import cogent from "./company/cogent.png";
-import adacell from "./company/adacell.png";
-import fillip from "./company/fillip.png";
-import innovovision from "./company/innovovision.png";
-import paypines from "./company/paypines.png";
 import self from "./company/self.png";
+import Upwork from "./company/Upwork.png";
+import ICT from "./company/ICT.png";
+import CN from "./company/CN.png";
+import cowi from "./company/cowi.png"
 
-import aditya from "./testimonials/aditya.png";
-import santosh from "./testimonials/santosh.png";
-import school from "./testimonials/school.png";
+import Logo from "./testimonials/Logo.png";
+import Nhan from "./testimonials/Nhan.jpg";
+import nhan2 from "./testimonials/nhan2.jpg";
 
 import Souvenir from "./projects/Souvenir.png";
-import healthcare from "./projects/healthcare.png";
-import portfolio from "./projects/portfolio.png";
 import elecWeb from "./projects/elecWeb.png";
-import elecAppP from "./projects/elecAppP.png";
-import FastfoodWeb from "./projects/FastfoodWeb.png";
 import APITruyen from "./projects/APITruyen.png";
+import FastfoodWeb from "./projects/FastfoodWeb.png";
+import elecAppP from "./projects/elecAppP.png";
+import nhanprofolio from "./projects/nhanprofolio.png";
+import badnhan from "./projects/3dnhan.png";
 
 export {
   logo,
@@ -49,20 +48,19 @@ export {
   typescript,
   php,
   nextjs,
-  cogent,
-  adacell,
-  fillip,
-  innovovision,
-  paypines,
   self,
   Souvenir,
-  healthcare,
-  portfolio,
-  aditya,
-  santosh,
-  school,
   elecWeb,
   elecAppP,
   FastfoodWeb,
-  APITruyen
+  APITruyen,
+  Logo,
+  Nhan,
+  nhan2,
+  nhanprofolio,
+  badnhan,
+  Upwork,
+  ICT,
+  CN,
+  cowi,
 };
