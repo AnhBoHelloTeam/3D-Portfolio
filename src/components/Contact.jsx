@@ -37,16 +37,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_y1wl3z2",
-        "template_rn5salx",
+        "service_hbop7xp",
+        "template_464nzhb",
         {
           form_name: form.name,
           to_name: "JavaScript Tutorial Family",
           from_email: form.email,
-          to_email: "abejrijwicareer@gmail.com",
+          to_email: "nhanhateku1@gmail.com",
           message: form.message,
         },
-        "6tlM2mstrxjjWpjRs"
+        "r1dk6_F-NXVzxgnWX"
       )
       .then(
         () => {
@@ -80,7 +80,7 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact.</h3>
         <div className="mt-8 flex flex-wrap gap-6 justify-center">
           <a
-            href="https://github.com/Abej-Rijwi"
+            href="https://github.com/AnhBoHelloTeam"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-700 to-purple-800 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"
@@ -93,7 +93,7 @@ const Contact = () => {
             <span className="text-xl">GitHub</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/abej-rijwi"
+            href="https://www.linkedin.com/in/nh%C3%A2n-nguy%E1%BB%85n-979675355/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"
