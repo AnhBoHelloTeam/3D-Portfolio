@@ -26,9 +26,13 @@ import aditya from "./testimonials/aditya.png";
 import santosh from "./testimonials/santosh.png";
 import school from "./testimonials/school.png";
 
-import threads from "./projects/threads.png";
+import Souvenir from "./projects/Souvenir.png";
 import healthcare from "./projects/healthcare.png";
 import portfolio from "./projects/portfolio.png";
+import elecWeb from "./projects/elecWeb.png";
+import elecAppP from "./projects/elecAppP.png";
+import FastfoodWeb from "./projects/FastfoodWeb.png";
+import APITruyen from "./projects/APITruyen.png";
 
 export {
   logo,
@@ -51,10 +55,14 @@ export {
   innovovision,
   paypines,
   self,
-  threads,
+  Souvenir,
   healthcare,
   portfolio,
   aditya,
   santosh,
   school,
+  elecWeb,
+  elecAppP,
+  FastfoodWeb,
+  APITruyen
 };

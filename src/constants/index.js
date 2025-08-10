@@ -14,12 +14,16 @@ import {
   innovovision,
   paypines,
   self,
-  threads,
+  Souvenir,
   healthcare,
   portfolio,
   aditya,
   santosh,
   school,
+  elecWeb,
+  elecAppP,
+  FastfoodWeb,
+  APITruyen,
 } from "../assets";
 
 export const navLinks = [
@@ -183,49 +187,116 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Threads Application",
+    name: "Souvenir E-commerce Website",
     description:
-      "Building a full-stack clone of Threads (a social media platform) with Next.js 14+ involves several stages, including user interface design, backend API development, real-time features, user authentication, notifications, and community management. The platform should support various features like nested comments, real-time search, and notifications.",
+      "A web application for selling souvenirs, developed using React with Vite, Node.js, and MongoDB. The platform includes features like shopping cart, product search, order tracking, and real-time chat between customers and shop owners. Designed to provide a smooth shopping experience with responsive UI for both desktop and mobile users.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
       },
       {
         name: "mongodb",
         color: "green-text-gradient",
       },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: threads,
-    source_code_link: "https://github.com/Abej-Rijwi/threads",
+    image: Souvenir,
+    source_code_link: "https://github.com/AnhBoHelloTeam/FE-NhanShopLuuNiem.git",
   },
   {
-    name: "Health Application",
+    name: "React Web Shop",
     description:
-      "Building a healthcare platform that streamlines patient registration, appointment scheduling, medical record management, complex forms, and SMS notifications is a large-scale project that involves both front-end and back-end components, integration with third-party services, and security measures to protect sensitive health data.",
+      "An e-commerce web application built with React, Node.js, and MongoDB. Includes admin and user dashboards, product search, secure checkout, and order management. Designed to provide a fast and intuitive online shopping experience.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "appwrite",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mongodb",
         color: "pink-text-gradient",
       },
     ],
-    image: healthcare,
-    source_code_link: "https://github.com/Abej-Rijwi/healthcare",
+    image: elecWeb,
+    source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_REACT.git",
   },
   {
-    name: "Portfolio Application",
+    name: "Flutter Mobile App",
+    description:
+      "A mobile e-commerce app built with Flutter and connected to a Node.js + MongoDB backend. Supports browsing products, viewing details, managing a shopping cart, and placing orders directly from a mobile device.",
+    tags: [
+      {
+        name: "flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: elecAppP,
+    source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_Flutter.git",
+  },
+  {
+    name: "Fast Food Web App",
+    description:
+      "A food ordering platform built with NestJS, React, and MySQL. Includes menu browsing, order placement, price calculation, and order tracking. Designed for restaurants to manage online orders efficiently.",
+    tags: [
+      {
+        name: "nestjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mysql",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: FastfoodWeb,
+    source_code_link: "https://github.com/AnhBoHelloTeam/fastfood-app_NetJS_fontent.git",
+  },
+  {
+    name: "React API Read Comics",
+    description:
+      "A web application for reading comics online using React and an API to fetch data from the server. Supports search, category filters, user login, and an admin panel for content management.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "api",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: APITruyen,
+    source_code_link: "https://github.com/AnhBoHelloTeam/ReactAPIReadTruyenNhanNG.git",
+  },
+  {
+    name: "NhanNG | Portfolio Application",
     description:
       "Building a personal portfolio website with react.js and three.js involves creating a visually appealing and responsive design that showcases your skills, projects, and experiences. The website should include sections for an introduction, project showcases, testimonials, and contact information. 3D graphics design  for amazing view using threejs.",
     tags: [
@@ -243,7 +314,7 @@ const projects = [
       },
     ],
     image: portfolio,
-    source_code_link: "https://github.com/Abej-Rijwi/portfolio",
+    source_code_link: "https://github.com/AnhBoHelloTeam/3D-Portfolio.git",
   },
 ];
 
