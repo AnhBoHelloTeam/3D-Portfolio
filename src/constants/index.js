@@ -24,6 +24,7 @@ import {
   CN,
   cowi,
   thread,
+  lamda,
 } from "../assets";
 
 export const navLinks = [
@@ -301,9 +302,9 @@ const projects = [
     live_demo_link: "https://threads-aplication.onrender.com/",
   },
   {
-    name: "Threads Application",
+    name: "LamDa Camera Shop",
     description:
-      "Building a full-stack clone of Threads (a social media platform) with Next.js 14+ involves several stages, including user interface design, backend API development, real-time features, user authentication, notifications, and community management. The platform should support various features like nested comments, real-time search, and notifications.",
+      "Lambda Camera Shop is a modern e-commerce web app built with Next.js, MongoDB, and Vite, offering fast performance and a smooth shopping experience for camera enthusiasts.",
     tags: [
       {
         name: "nextjs",
@@ -314,14 +315,15 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Vite",
         color: "pink-text-gradient",
       },
     ],
-    image: thread,
+    image: lamda,
     source_code_link: "https://github.com/AnhBoHelloTeam/Threads-Aplication.git",
     live_demo_link: "https://threads-aplication.onrender.com/",
   },
+  
   {
     name: "Flutter Mobile App",
     description:
