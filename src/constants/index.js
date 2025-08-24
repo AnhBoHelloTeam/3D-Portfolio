@@ -301,6 +301,28 @@ const projects = [
     live_demo_link: "https://threads-aplication.onrender.com/",
   },
   {
+    name: "Threads Application",
+    description:
+      "Building a full-stack clone of Threads (a social media platform) with Next.js 14+ involves several stages, including user interface design, backend API development, real-time features, user authentication, notifications, and community management. The platform should support various features like nested comments, real-time search, and notifications.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: thread,
+    source_code_link: "https://github.com/AnhBoHelloTeam/Threads-Aplication.git",
+    live_demo_link: "https://threads-aplication.onrender.com/",
+  },
+  {
     name: "Flutter Mobile App",
     description:
       "A mobile e-commerce app built with Flutter and connected to a Node.js + MongoDB backend. Supports browsing products, viewing details, managing a shopping cart, and placing orders directly from a mobile device.",
