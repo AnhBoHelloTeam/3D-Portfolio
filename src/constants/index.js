@@ -23,6 +23,7 @@ import {
   ICT,
   CN,
   cowi,
+  thread,
 } from "../assets";
 
 export const navLinks = [
@@ -276,6 +277,28 @@ const projects = [
     image: elecWeb,
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_REACT.git",
     live_demo_link: "https://shop-frontend-8yko.onrender.com/",
+  },
+  {
+    name: "Threads Application",
+    description:
+      "Building a full-stack clone of Threads (a social media platform) with Next.js 14+ involves several stages, including user interface design, backend API development, real-time features, user authentication, notifications, and community management. The platform should support various features like nested comments, real-time search, and notifications.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: thread,
+    source_code_link: "https://github.com/AnhBoHelloTeam/Threads-Aplication.git",
+    live_demo_link: "https://threads-aplication.onrender.com/",
   },
   {
     name: "Flutter Mobile App",

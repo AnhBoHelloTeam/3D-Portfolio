@@ -32,6 +32,7 @@ import FastfoodWeb from "./projects/FastfoodWeb.png";
 import elecAppP from "./projects/elecAppP.png";
 import nhanprofolio from "./projects/nhanprofolio.png";
 import badnhan from "./projects/3dnhan.png";
+import thread from "./projects/thread.png";
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   ICT,
   CN,
   cowi,
+  thread,
 };
