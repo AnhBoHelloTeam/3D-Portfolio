@@ -33,6 +33,7 @@ import elecAppP from "./projects/elecAppP.png";
 import nhanprofolio from "./projects/nhanprofolio.png";
 import badnhan from "./projects/3dnhan.png";
 import thread from "./projects/thread.png";
+import lamda from "./projects/lamda.png";
 
 export {
   logo,
@@ -65,4 +66,5 @@ export {
   CN,
   cowi,
   thread,
+  lamda,
 };
