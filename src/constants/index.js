@@ -320,8 +320,8 @@ const projects = [
       },
     ],
     image: lamda,
-    source_code_link: "https://github.com/AnhBoHelloTeam/Threads-Aplication.git",
-    live_demo_link: "https://threads-aplication.onrender.com/",
+    source_code_link: "https://github.com/AnhBoHelloTeam",
+    live_demo_link: "https://github.com/AnhBoHelloTeam",
   },
   
   {
