@@ -342,7 +342,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    //update project
+    //Sửa ảnh
     image: elecAppP,
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_Flutter.git",
     live_demo_link: "https://shop-flutter-1c992.firebaseapp.com/",
