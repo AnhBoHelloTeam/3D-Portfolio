@@ -342,7 +342,6 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    //complete
     image: elecAppP,
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_Flutter.git",
     live_demo_link: "https://shop-flutter-1c992.firebaseapp.com/",
@@ -369,6 +368,28 @@ const projects = [
     image: APITruyen,
     source_code_link: "https://github.com/AnhBoHelloTeam/ReactAPIReadTruyenNhanNG.git",
     live_demo_link: "https://reactapireadtruyennhanng.onrender.com/",
+  },
+  {
+    name: "Product Management Software",
+    description:
+      "All-in-One platform that helps Product Managers turn ideas into successful products. Manage roadmaps, gather user insights, organize backlogs, and collaborate with the entire team - all in one place.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "api",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: APITruyen,
+    source_code_link: "https://github.com/AnhBoHelloTeam/123fakturera_FE.git",
+    live_demo_link: "https://one23fakturera-fe.onrender.com",
   },
   {
     name: "Fast Food Web App",
