@@ -34,6 +34,7 @@ import nhanprofolio from "./projects/nhanprofolio.png";
 import badnhan from "./projects/3dnhan.png";
 import thread from "./projects/thread.png";
 import lamda from "./projects/lamda.png";
+import terms from "./projects/terms.jpg";
 
 export {
   logo,
@@ -67,4 +68,5 @@ export {
   cowi,
   thread,
   lamda,
+  terms,
 };

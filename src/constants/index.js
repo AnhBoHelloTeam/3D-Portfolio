@@ -25,6 +25,7 @@ import {
   cowi,
   thread,
   lamda,
+  terms,
 } from "../assets";
 
 export const navLinks = [
@@ -379,7 +380,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "api",
+        name: "Vite",
         color: "green-text-gradient",
       },
       {
@@ -387,7 +388,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: APITruyen,
+    image: terms,
     source_code_link: "https://github.com/AnhBoHelloTeam/123fakturera_FE.git",
     live_demo_link: "https://one23fakturera-fe.onrender.com",
   },
