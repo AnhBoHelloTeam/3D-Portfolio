@@ -24,7 +24,7 @@ import Upwork from "./company/Upwork.png";
 import ICT from "./company/ICT.png";
 import CN from "./company/CN.png";
 import cowi from "./company/cowi.png"
-import vlux_ai_icon from "./company/vlux_ai_icon.png";
+import vlux_ai_icon from "./company/LOGO_VLUX.png";
 
 // testimonials
 
