@@ -99,7 +99,7 @@ const experiences = [
     company_name: "VLUX AI",
     icon: vlux_ai_icon,
     iconBg: "#E6DEDD",
-    date: "August 2025 - Present",
+    date: "August 2025 - Present", // Đã đổi từ June sang August
     points: [
       "Develop and deploy cutting-edge Automation & AI solutions for SMEs in Australia, Canada, and Vietnam, aligning with VLUX AI's core service offerings.",
       "Design and implement complex automation workflows using n8n to integrate disparate systems, streamline business operations, and enhance data flow efficiency.",
