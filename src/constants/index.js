@@ -95,6 +95,20 @@ const technologies = [
 
 const experiences = [
   {
+    title: "AI Automation & Development Specialist",
+    company_name: "VLUX AI",
+    icon: vlux_ai_icon,
+    iconBg: "#E6DEDD",
+    date: "August 2025 - Present",
+    points: [
+      "Develop and deploy cutting-edge Automation & AI solutions for SMEs in Australia, Canada, and Vietnam, aligning with VLUX AI's core service offerings.",
+      "Design and implement complex automation workflows using n8n to integrate disparate systems, streamline business operations, and enhance data flow efficiency.",
+      "Collaborate with cross-functional teams (Design, Web Development, Marketing) to deliver integrated solutions, including modern websites/apps, smart management software, and booking systems.",
+      "Support the execution of multi-channel marketing strategies by leveraging AI for customer personalization and campaign automation.",
+      "Continuously monitor, maintain, and optimize automated processes to ensure maximum stability, performance, and value for clients."
+    ],
+  },
+  {
     title: "Automation & Workflow Assistant (N8N)",
     company_name: "COWI Autobiz",
     icon: cowi,
