@@ -26,6 +26,7 @@ import {
   thread,
   lamda,
   terms,
+  vlux_ai_icon,
 } from "../assets";
 
 export const navLinks = [

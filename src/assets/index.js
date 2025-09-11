@@ -76,4 +76,5 @@ export {
   thread,
   lamda,
   terms,
-  vlux_ai_icon,};
+  vlux_ai_icon,
+};
