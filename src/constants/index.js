@@ -248,6 +248,45 @@ const projects = [
     live_demo_link: "https://nhanngfolio.onrender.com/",
   },
   {
+    name: "VLUXAI | Business Tech Solutions",
+    description:
+      "Corporate website showcasing AI, website/app development, management software, and marketing services. Fully responsive with modern layout, service pages, blog, and multilingual support.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "seo", color: "green-text-gradient" },
+      { name: "responsive", color: "pink-text-gradient" },
+    ],
+    image: "/vluxai.com.png",
+    source_code_link: "",
+    live_demo_link: "https://vluxai.com/",
+  },
+  {
+    name: "Soho Nails | Salon Website",
+    description:
+      "A salon website with multi-branch pages, service lists, pricing, and booking/contact info. Focused on clean design, readability, and SEO content structure.",
+    tags: [
+      { name: "react", color: "blue-text-gradient" },
+      { name: "seo", color: "green-text-gradient" },
+      { name: "responsive", color: "pink-text-gradient" },
+    ],
+    image: "/sohonails.com.au_.png",
+    source_code_link: "",
+    live_demo_link: "https://sohonails.com.au/",
+  },
+  {
+    name: "Austrix | W&D Website",
+    description:
+      "A construction/windows & doors business site featuring services, portfolios, blog, shop pages and request-a-quote flow. Focus on premium visuals, conversions, and content structure.",
+    tags: [
+      { name: "wordpress", color: "blue-text-gradient" },
+      { name: "seo", color: "green-text-gradient" },
+      { name: "responsive", color: "pink-text-gradient" },
+    ],
+    image: "/austrix.vluxai.com.png",
+    source_code_link: "",
+    live_demo_link: "https://austrix.vluxai.com/",
+  },
+  {
     name: "Souvenir E-commerce Website",
     description:
       "A web application for selling souvenirs, developed using React with Vite, Node.js, and MongoDB. The platform includes features like shopping cart, product search, order tracking, and real-time chat between customers and shop owners. Designed to provide a smooth shopping experience with responsive UI for both desktop and mobile users.",

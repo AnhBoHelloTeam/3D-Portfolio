@@ -2,7 +2,7 @@ import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, logo } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -27,6 +27,14 @@ const ProjectCard = ({
             src={image}
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = logo; // fallback if image not found
+              e.currentTarget.classList.add("opacity-80");
+            }}
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
@@ -37,6 +45,8 @@ const ProjectCard = ({
                 src={github}
                 alt="github"
                 className="w-1/2 h-1/2 object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div

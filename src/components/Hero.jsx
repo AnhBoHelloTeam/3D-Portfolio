@@ -1,10 +1,14 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useMemo } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const Hero = () => {
+  const prefersReducedMotion = useMemo(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return false;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -34,10 +38,8 @@ const Hero = () => {
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
+              animate={prefersReducedMotion ? undefined : { y: [0, 24, 0] }}
+              transition={prefersReducedMotion ? undefined : {
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: "loop",

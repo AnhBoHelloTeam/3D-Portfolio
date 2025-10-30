@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from "react";
-import { BrowserRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -14,7 +13,7 @@ const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
@@ -44,7 +43,7 @@ const App = () => {
           </Suspense>
         </div>
       </div>
-    </BrowserRouter>
+    </>
   );
 };
 

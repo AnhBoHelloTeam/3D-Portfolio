@@ -1,0 +1,8 @@
+dist/
+node_modules/
+*.svg
+*.gltf
+*.bin
+*.png
+*.jpg
+*.jpeg
