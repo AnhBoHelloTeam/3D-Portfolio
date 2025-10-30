@@ -8,10 +8,12 @@ const About = lazy(() => import("./components/About"));
 const Experience = lazy(() => import("./components/Experience"));
 const Tech = lazy(() => import("./components/Tech"));
 const Works = lazy(() => import("./components/Works"));
+const AutomationProjects = lazy(() => import("./components/AutomationProjects"));
 const Feedbacks = lazy(() => import("./components/Feedbacks"));
 const Contact = lazy(() => import("./components/Contact"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 const CvOnline = lazy(() => import("./pages/CvOnline"));
+const AutomationDetail = lazy(() => import("./pages/AutomationDetail"));
 
 const MainPortfolio = () => (
   <div className="relative z-0 bg-primary">
@@ -30,6 +32,9 @@ const MainPortfolio = () => (
     </Suspense>
     <Suspense fallback={null}>
       <Works />
+    </Suspense>
+    <Suspense fallback={null}>
+      <AutomationProjects />
     </Suspense>
     <Suspense fallback={null}>
       <Feedbacks />
@@ -52,6 +57,11 @@ const App = () => {
         <Route path="/cv" element={
           <Suspense fallback={null}>
             <CvOnline />
+          </Suspense>
+        } />
+        <Route path="/automation/:id" element={
+          <Suspense fallback={null}>
+            <AutomationDetail />
           </Suspense>
         } />
         <Route path="*" element={<MainPortfolio />} />

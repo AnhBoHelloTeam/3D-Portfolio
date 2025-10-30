@@ -1,8 +1,7 @@
-import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github, logo } from "../assets";
+import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -14,13 +13,15 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
-  live_demo_link, // Thêm prop cho link view dự án
+  live_demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full"
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="group"
+    >
+      <div
+        className="bg-tertiary p-5 rounded-2xl sm:w-[300px] w-full shadow border border-black-100 transition-all duration-200 group-hover:shadow-2xl group-hover:scale-105 cursor-pointer"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -32,7 +33,7 @@ const ProjectCard = ({
             fetchPriority="low"
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = logo; // fallback if image not found
+              e.currentTarget.src = github;
               e.currentTarget.classList.add("opacity-80");
             }}
           />
@@ -40,6 +41,9 @@ const ProjectCard = ({
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="bg-sky-500 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2"
+              tabIndex={0}
+              role="button"
+              onKeyDown={e => e.key === "Enter" && window.open(source_code_link, "_blank")}
             >
               <img
                 src={github}
@@ -52,6 +56,9 @@ const ProjectCard = ({
             <div
               onClick={() => window.open(live_demo_link, "_blank")}
               className="bg-blue-500 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              tabIndex={0}
+              role="button"
+              onKeyDown={e => e.key === "Enter" && window.open(live_demo_link, "_blank")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +96,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };
@@ -101,7 +108,6 @@ const Works = () => {
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
-
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
@@ -114,7 +120,6 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />

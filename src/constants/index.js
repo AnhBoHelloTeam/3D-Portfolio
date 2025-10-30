@@ -471,3 +471,80 @@ const projects = [
 ];
 
 export { services, technologies, experiences, testimonials, projects };
+
+// Thêm mới automationProjects section
+export const automationProjects = [
+  {
+    id: "crm-auto-lead-capture",
+    name: "CRM Auto-Lead Capture",
+    description:
+      "Automatically collect leads from website, push to Google Sheets CRM, auto-tag by source, log and daily summary.",
+    tools: ["n8n", "Webhooks", "Google Sheets", "Slack"],
+    impact: "Saves 4 hours weekly, ensures 100% accurate group assignment.",
+    type: "SME Client",
+    image: "/automation/crm-autolead-demo.png",
+    longDescription:
+      "This workflow automates the entire lead capture process for SMEs by connecting web forms to Google Sheets, tagging leads by source and generating automated summaries sent to Slack. It eliminates manual spreadsheet entry and repeated human error.",
+    howToSetup:[
+      "Create a webhook trigger in n8n for lead submission form.",
+      "Add nodes to transform and validate data.",
+      "Connect Google Sheets node to store the lead with tags.",
+      "Use Slack node to send summary notifications.",
+      "Add error handling and run provisioning schedule."
+    ],
+    video: "https://www.youtube.com/embed/HU4q1K4EHqM",
+    docsLink: "https://docs.google.com/document/d/automation-demo",
+    codeSnippet: `POST /api/lead {
+  "name": "Nguyen Van A",
+  "source": "website",
+  "email": "a@gmail.com"
+}`
+  },
+  {
+    id: "auto-daily-report-alert",
+    name: "Auto Daily Report & Alert",
+    description:
+      "Aggregate daily sales from APIs, sync to Google Sheets, send Telegram alerts. Automatic retry on errors.",
+    tools: ["n8n", "Google Sheets", "Telegram", "REST API"],
+    impact: "Boosts reporting 1.5x; reduces copy-paste mistakes.",
+    type: "Internal Project",
+    image: "/automation/sales-dashboard-demo.png",
+    longDescription:
+      "Synchronizes and analyzes data from multiple sales channels, creates day-to-day reports in Google Sheets, and pushes instant updates to management via Telegram. Ensures reliability with smart error recovery.",
+    howToSetup: [
+      "Configure API credentials in n8n.",
+      "Create repeating trigger node (every day at set time).",
+      "Aggregate and transform sales data.",
+      "Insert/update Google Sheets table.",
+      "Send Telegram alert with summary."
+    ],
+    video: "https://www.youtube.com/embed/Gj6E5L3XN2o",
+    docsLink: "https://notion.so/automation-report-demo",
+    codeSnippet: `curl -X POST https://domain/api/sync \n  -d '{"task":"sync sales", "date":"{{now}}"}'`
+  },
+  {
+    id: "email-invoice-bot",
+    name: "Email Invoice Bot",
+    description:
+      "Parse order details from company email, auto-inserts new records into Airtable, notifies accounting via Telegram.",
+    tools: ["n8n", "IMAP", "Airtable", "Telegram"],
+    impact: "Reduces 90% of manual work, zero missing invoices, full automation.",
+    type: "Real Client Project",
+    image: "/automation/email-invoice-demo.png",
+    longDescription:
+      "Email Invoice Bot helps companies automate invoice collection. It reads emails, parses order details, stores data in Airtable, and immediately notifies the accounting team in Telegram. No order is left behind.",
+    howToSetup: [
+      "Create IMAP Email trigger in n8n for accounting inbox.",
+      "Use parser node to extract OrderID, Date, Amount, Customer.",
+      "Connect to Airtable API to add/update record.",
+      "Send Telegram alert with new invoice summary.",
+      "Test with real incoming mails and setup error notification handling."
+    ],
+    video: "",
+    docsLink: "https://docs.google.com/document/d/email-invoice-guide",
+    codeSnippet: `// n8n Function node\nreturn {
+  "OrderId": $json["order_id"],
+  "Amount": $json["total"]
+};`
+  },
+];
