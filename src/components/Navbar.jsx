@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,11 @@ const Navbar = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleViewCv = () => {
+    setActive("View CV Online");
+    navigate("/cv");
   };
 
   return (
@@ -63,6 +70,13 @@ const Navbar = () => {
             </li>
           ))}
           <li
+            className={`${active === "View CV Online" ? "text-yellow-300" : "text-secondary"} hover:text-yellow-400 text-[18px] font-bold cursor-pointer transition`}
+            style={{border: '1px solid #fcd34d', borderRadius: 6, padding: "0 12px", margin: '0 4px'}}
+            onClick={handleViewCv}
+          >
+            View CV Online
+          </li>
+          <li
             className={`${active === "Download CV" ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
             onClick={handleCvDownload}
           >
@@ -93,9 +107,19 @@ const Navbar = () => {
                 </li>
               ))}
               <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === "View CV Online" ? "text-yellow-300" : "text-secondary"}`}
+                style={{border: '1px solid #fcd34d', borderRadius: 6, padding: "0 12px", margin: '0 4px'}}
+                onClick={() => {
+                  setToggle(false);
+                  handleViewCv();
+                }}
+              >
+                View CV Online
+              </li>
+              <li
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${active === "Download CV" ? "text-white" : "text-secondary"}`}
                 onClick={() => {
-                  setToggle(!toggle);
+                  setToggle(false);
                   handleCvDownload();
                 }}
               >
