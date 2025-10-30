@@ -33,8 +33,8 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    // Add a listener for changes to the screen size (align with Tailwind sm:640px)
+    const mediaQuery = window.matchMedia("(max-width: 640px)");
 
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
@@ -76,3 +76,6 @@ const ComputersCanvas = () => {
 };
 
 export default ComputersCanvas;
+
+// Preload heavy GLTF ahead of time for faster first paint
+useGLTF.preload("/desktop_pc/scene.gltf");

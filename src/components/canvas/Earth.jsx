@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -48,6 +48,11 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const prefersReducedMotion = useMemo(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return false;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
   return (
     <Canvas
       shadows
@@ -63,7 +68,7 @@ const EarthCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          autoRotate
+          autoRotate={!prefersReducedMotion}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
@@ -77,3 +82,6 @@ const EarthCanvas = () => {
 };
 
 export default EarthCanvas;
+
+// Preload GLTF for better perceived performance
+useGLTF.preload("/planet/scene.gltf");
