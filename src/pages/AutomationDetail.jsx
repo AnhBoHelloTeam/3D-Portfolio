@@ -56,6 +56,17 @@ export default function AutomationDetail() {
     setTimeout(() => setCopySuccess(""), 1600);
   };
 
+  const getVideoEmbedUrl = (url) => {
+    if (!url) return "";
+    // Convert YouTube watch link to embed format
+    if (url.includes("youtube.com/watch?v=")) {
+      const videoId = url.split("v=")[1]?.split("&")[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    // Already embed format or other video platforms
+    return url;
+  };
+
   return (
     <div className="min-h-screen bg-[#f6f8fa] py-6 px-2 max-w-3xl mx-auto">
       <button className="mb-6 mt-2 bg-orange-500 text-white rounded px-4 py-2 shadow hover:bg-orange-400 font-semibold" onClick={() => navigate(-1)}>
@@ -71,7 +82,7 @@ export default function AutomationDetail() {
         <div className="mb-4">
           <label className="block mb-2 font-semibold text-gray-800">Demo Video:</label>
           <div className="aspect-w-16 aspect-h-9 w-full max-w-2xl mx-auto mb-2" style={{maxWidth: 740, minHeight: 220}}>
-            <iframe src={proj.video} title={proj.name + ' video'} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="rounded-lg shadow w-full h-64"></iframe>
+            <iframe src={getVideoEmbedUrl(proj.video)} title={proj.name + ' video'} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen className="rounded-lg shadow w-full h-64"></iframe>
           </div>
         </div>
       )}

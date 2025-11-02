@@ -482,7 +482,7 @@ export const automationProjects = [
     tools: ["n8n", "Webhooks", "Google Sheets", "Slack"],
     impact: "Saves 4 hours weekly, ensures 100% accurate group assignment.",
     type: "SME Client",
-    image: "/automation/crm-autolead-demo.png",
+    image: "/automation/n81.png",
     longDescription:
       "This workflow automates the entire lead capture process for SMEs by connecting web forms to Google Sheets, tagging leads by source and generating automated summaries sent to Slack. It eliminates manual spreadsheet entry and repeated human error.",
     howToSetup: [
@@ -508,7 +508,7 @@ export const automationProjects = [
     tools: ["n8n", "Google Sheets", "Telegram", "REST API"],
     impact: "Boosts reporting 1.5x; reduces copy-paste mistakes.",
     type: "Internal Project",
-    image: "/automation/sales-dashboard-demo.png",
+    image: "/automation/n82.png",
     longDescription:
       "Synchronizes and analyzes data from multiple sales channels, creates day-to-day reports in Google Sheets, and pushes instant updates to management via Telegram. Ensures reliability with smart error recovery.",
     howToSetup: [
@@ -530,7 +530,7 @@ export const automationProjects = [
     tools: ["n8n", "IMAP", "Airtable", "Telegram"],
     impact: "Reduces 90% of manual work, zero missing invoices, full automation.",
     type: "Real Client Project",
-    image: "/automation/email-invoice-demo.png",
+    image: "/automation/n83.png",
     longDescription:
       "Email Invoice Bot helps companies automate invoice collection. It reads emails, parses order details, stores data in Airtable, and immediately notifies the accounting team in Telegram. No order is left behind.",
     howToSetup: [
@@ -556,7 +556,7 @@ return {
     tools: ["n8n", "Google Sheets", "Instagram API", "Facebook Graph API", "Cron"],
     impact: "Saves 6+ hours per week on social media management, ensures consistent posting schedule.",
     type: "SME Client",
-    image: "/automation/social-posting-demo.png",
+    image: "/automation/n84.png",
     longDescription:
       "This workflow reads scheduled posts from Google Sheets, processes images and text, then publishes to Instagram and Facebook at optimal times. Includes hashtag optimization, image resizing, and engagement tracking.",
     howToSetup: [
@@ -585,7 +585,7 @@ return {
     tools: ["n8n", "Shopify API", "WooCommerce API", "PostgreSQL", "Telegram", "Email"],
     impact: "Prevents stockouts, reduces manual inventory checks by 80%, alerts team instantly.",
     type: "Real Client Project",
-    image: "/automation/inventory-sync-demo.png",
+    image: "/automation/n85.png",
     longDescription:
       "This system continuously monitors inventory across multiple e-commerce platforms, syncs data to a central PostgreSQL database, and sends instant alerts via Telegram and Email when products fall below reorder levels. Includes automated reorder suggestions.",
     howToSetup: [
@@ -615,9 +615,9 @@ if (lowStock.length > 0) {
     tools: ["n8n", "Zendesk API", "OpenAI API", "Slack", "Airtable"],
     impact: "Reduces ticket response time by 40%, ensures tickets reach correct specialist immediately.",
     type: "Internal Project",
-    image: "/automation/ticket-router-demo.png",
-    longDescription:
-      "[translate:Uses AI (OpenAI) to analyze ticket content, automatically tags by category (billing, technical, sales), assigns priority, and routes to appropriate team in Slack. VIP customers get escalated automatically. All routing decisions logged in Airtable.]",
+    image: "/automation/n86.png",
+      longDescription:
+        "Uses AI (OpenAI) to analyze ticket content, automatically tags by category (billing, technical, sales), assigns priority, and routes to appropriate team in Slack. VIP customers get escalated automatically. All routing decisions logged in Airtable.",
     howToSetup: [
       "Connect Zendesk webhook for new ticket events.",
       "Extract ticket content and customer data.",
@@ -648,7 +648,7 @@ const analysis = await openai.chat({
     tools: ["n8n", "Cron", "PostgreSQL", "AWS S3", "Google Drive API", "Email"],
     impact: "Ensures 99.9% data safety, automates compliance requirements, saves storage costs via smart archiving.",
     type: "Real Client Project",
-    image: "/automation/backup-archive-demo.png",
+    image: "/automation/n87.png",
     longDescription:
       "Performs scheduled full and incremental backups of databases and file systems. Backs up to AWS S3 and Google Drive simultaneously for redundancy. Automatically archives data older than retention period to cold storage, and sends daily backup status reports.",
     howToSetup: [
@@ -679,7 +679,7 @@ aws s3 cp backup_*.sql.gz s3://backup-bucket/`
     tools: ["n8n", "Shopify", "WooCommerce", "ShipStation API", "Email", "SMS"],
     impact: "Reduces order processing time from 2 hours to 15 minutes, eliminates human errors, improves customer satisfaction.",
     type: "SME Client",
-    image: "/automation/order-fulfillment-demo.png",
+    image: "/automation/n88.png",
     longDescription:
       "When an order is placed, this workflow automatically validates inventory, reserves items, generates shipping label via ShipStation, updates order status across all platforms, sends tracking information via email and SMS, and logs everything for analytics.",
     howToSetup: [
