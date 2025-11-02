@@ -485,15 +485,15 @@ export const automationProjects = [
     image: "/automation/crm-autolead-demo.png",
     longDescription:
       "This workflow automates the entire lead capture process for SMEs by connecting web forms to Google Sheets, tagging leads by source and generating automated summaries sent to Slack. It eliminates manual spreadsheet entry and repeated human error.",
-    howToSetup:[
+    howToSetup: [
       "Create a webhook trigger in n8n for lead submission form.",
       "Add nodes to transform and validate data.",
       "Connect Google Sheets node to store the lead with tags.",
       "Use Slack node to send summary notifications.",
       "Add error handling and run provisioning schedule."
     ],
-    video: "https://www.youtube.com/embed/HU4q1K4EHqM",
-    docsLink: "https://docs.google.com/document/d/automation-demo",
+    video: "https://www.youtube.com/watch?v=fWtXJswvUcA",
+    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/",
     codeSnippet: `POST /api/lead {
   "name": "Nguyen Van A",
   "source": "website",
@@ -518,8 +518,8 @@ export const automationProjects = [
       "Insert/update Google Sheets table.",
       "Send Telegram alert with summary."
     ],
-    video: "https://www.youtube.com/embed/Gj6E5L3XN2o",
-    docsLink: "https://notion.so/automation-report-demo",
+    video: "https://www.youtube.com/watch?v=Zq9o_rq2WWo",
+    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.cron/",
     codeSnippet: `curl -X POST https://domain/api/sync \n  -d '{"task":"sync sales", "date":"{{now}}"}'`
   },
   {
@@ -540,9 +540,10 @@ export const automationProjects = [
       "Send Telegram alert with new invoice summary.",
       "Test with real incoming mails and setup error notification handling."
     ],
-    video: "",
-    docsLink: "https://docs.google.com/document/d/email-invoice-guide",
-    codeSnippet: `// n8n Function node\nreturn {
+    video: "https://www.youtube.com/watch?v=nEJ3lYGaq70",
+    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.emailtrigger/",
+    codeSnippet: `// n8n Function node
+return {
   "OrderId": $json["order_id"],
   "Amount": $json["total"]
 };`
@@ -567,9 +568,14 @@ export const automationProjects = [
       "Post to Facebook Graph API.",
       "Update Google Sheets with post status and link."
     ],
-    video: "",
-    docsLink: "https://docs.google.com/document/d/social-auto-posting",
-    codeSnippet: `// Instagram post payload\n{\n  "image_url": "{{$json.image}}",\n  "caption": "{{$json.caption}} #{{$json.hashtags}}",\n  "access_token": "{{$env.IG_TOKEN}}"\n}`
+    video: "https://www.youtube.com/watch?v=-Oc_HfreJJE",
+    docsLink: "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/",
+    codeSnippet: `// Instagram post payload
+{
+  "image_url": "{{$json.image}}",
+  "caption": "{{$json.caption}} #{{$json.hashtags}}",
+  "access_token": "{{$env.IG_TOKEN}}"
+}`
   },
   {
     id: "inventory-sync-alert",
@@ -592,8 +598,14 @@ export const automationProjects = [
       "Log all sync operations for audit trail."
     ],
     video: "",
-    docsLink: "https://docs.google.com/document/d/inventory-sync-guide",
-    codeSnippet: `// Check stock threshold\nconst lowStock = items.filter(item => \n  item.quantity < item.threshold\n);\nif (lowStock.length > 0) {\n  return { lowStock, action: 'alert' };\n}`
+    docsLink: "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.shopify/",
+    codeSnippet: `// Check stock threshold
+const lowStock = items.filter(item => 
+  item.quantity < item.threshold
+);
+if (lowStock.length > 0) {
+  return { lowStock, action: 'alert' };
+}`
   },
   {
     id: "support-ticket-router",
@@ -605,7 +617,7 @@ export const automationProjects = [
     type: "Internal Project",
     image: "/automation/ticket-router-demo.png",
     longDescription:
-      "Uses AI (OpenAI) to analyze ticket content, automatically tags by category (billing, technical, sales), assigns priority, and routes to appropriate team in Slack. VIP customers get escalated automatically. All routing decisions logged in Airtable.",
+      "[translate:Uses AI (OpenAI) to analyze ticket content, automatically tags by category (billing, technical, sales), assigns priority, and routes to appropriate team in Slack. VIP customers get escalated automatically. All routing decisions logged in Airtable.]",
     howToSetup: [
       "Connect Zendesk webhook for new ticket events.",
       "Extract ticket content and customer data.",
@@ -615,9 +627,18 @@ export const automationProjects = [
       "Update Airtable with ticket ID, category, and assignment.",
       "Send confirmation email to customer."
     ],
-    video: "",
-    docsLink: "https://docs.google.com/document/d/ticket-router-setup",
-    codeSnippet: `// OpenAI analysis\nconst analysis = await openai.chat({\n  model: "gpt-4",\n  messages: [{\n    role: "system",\n    content: "Categorize support ticket..."\n  }]\n});`
+    video: "https://www.youtube.com/watch?v=5Q2eSTudxS4",
+    docsLink: "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.openai/",
+    codeSnippet: `// OpenAI analysis
+const analysis = await openai.chat({
+  model: "gpt-4",
+  messages: [
+    {
+      role: "system",
+      content: "Categorize support ticket..."
+    }
+  ]
+});`
   },
   {
     id: "data-backup-archive",
@@ -642,8 +663,13 @@ export const automationProjects = [
       "Send email report with backup status and size."
     ],
     video: "",
-    docsLink: "https://docs.google.com/document/d/backup-archive-guide",
-    codeSnippet: `# Backup script\npg_dump -h $DB_HOST -U $DB_USER $DB_NAME | \\\n  gzip > backup_$(date +%Y%m%d).sql.gz\n\n# Upload to S3\naws s3 cp backup_*.sql.gz s3://backup-bucket/`
+    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/",
+    codeSnippet: `# Backup script
+pg_dump -h $DB_HOST -U $DB_USER $DB_NAME | \\
+  gzip > backup_$(date +%Y%m%d).sql.gz
+
+# Upload to S3
+aws s3 cp backup_*.sql.gz s3://backup-bucket/`
   },
   {
     id: "order-fulfillment-workflow",
@@ -667,8 +693,14 @@ export const automationProjects = [
       "Update inventory levels across all channels.",
       "Log order details to analytics database."
     ],
-    video: "",
-    docsLink: "https://docs.google.com/document/d/order-fulfillment-guide",
-    codeSnippet: `// ShipStation label request\n{\n  "orderId": "{{$json.order_id}}",\n  "carrierCode": "fedex",\n  "serviceCode": "fedex_ground",\n  "shipDate": "{{$now}}"\n}`
-  },
+    video: "https://www.youtube.com/watch?v=VcFbPT4H0bs",
+    docsLink: "https://docs.n8n.io/workflows/best-practices/",
+    codeSnippet: `// ShipStation label request
+{
+  "orderId": "{{$json.order_id}}",
+  "carrierCode": "fedex",
+  "serviceCode": "fedex_ground",
+  "shipDate": "{{$now}}"
+}`
+  }
 ];
