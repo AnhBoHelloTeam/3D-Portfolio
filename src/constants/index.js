@@ -547,4 +547,128 @@ export const automationProjects = [
   "Amount": $json["total"]
 };`
   },
+  {
+    id: "social-media-auto-posting",
+    name: "Social Media Auto-Posting",
+    description:
+      "Automatically schedule and post content to Instagram and Facebook from Google Sheets. Supports images, captions, and hashtags.",
+    tools: ["n8n", "Google Sheets", "Instagram API", "Facebook Graph API", "Cron"],
+    impact: "Saves 6+ hours per week on social media management, ensures consistent posting schedule.",
+    type: "SME Client",
+    image: "/automation/social-posting-demo.png",
+    longDescription:
+      "This workflow reads scheduled posts from Google Sheets, processes images and text, then publishes to Instagram and Facebook at optimal times. Includes hashtag optimization, image resizing, and engagement tracking.",
+    howToSetup: [
+      "Set up Google Sheets with columns: Date, Time, Image URL, Caption, Hashtags.",
+      "Create a Cron trigger in n8n (runs every hour).",
+      "Filter posts scheduled for current time window.",
+      "Download and resize images if needed.",
+      "Post to Instagram API with caption.",
+      "Post to Facebook Graph API.",
+      "Update Google Sheets with post status and link."
+    ],
+    video: "",
+    docsLink: "https://docs.google.com/document/d/social-auto-posting",
+    codeSnippet: `// Instagram post payload\n{\n  "image_url": "{{$json.image}}",\n  "caption": "{{$json.caption}} #{{$json.hashtags}}",\n  "access_token": "{{$env.IG_TOKEN}}"\n}`
+  },
+  {
+    id: "inventory-sync-alert",
+    name: "Inventory Sync & Low Stock Alert",
+    description:
+      "Sync inventory levels from multiple sources (Shopify, WooCommerce) to central database. Send alerts when stock drops below threshold.",
+    tools: ["n8n", "Shopify API", "WooCommerce API", "PostgreSQL", "Telegram", "Email"],
+    impact: "Prevents stockouts, reduces manual inventory checks by 80%, alerts team instantly.",
+    type: "Real Client Project",
+    image: "/automation/inventory-sync-demo.png",
+    longDescription:
+      "This system continuously monitors inventory across multiple e-commerce platforms, syncs data to a central PostgreSQL database, and sends instant alerts via Telegram and Email when products fall below reorder levels. Includes automated reorder suggestions.",
+    howToSetup: [
+      "Configure API credentials for Shopify and WooCommerce.",
+      "Create scheduled trigger (runs every 30 minutes).",
+      "Fetch current inventory levels from all sources.",
+      "Compare with thresholds stored in PostgreSQL.",
+      "Send Telegram alert if low stock detected.",
+      "Send email to procurement team with reorder list.",
+      "Log all sync operations for audit trail."
+    ],
+    video: "",
+    docsLink: "https://docs.google.com/document/d/inventory-sync-guide",
+    codeSnippet: `// Check stock threshold\nconst lowStock = items.filter(item => \n  item.quantity < item.threshold\n);\nif (lowStock.length > 0) {\n  return { lowStock, action: 'alert' };\n}`
+  },
+  {
+    id: "support-ticket-router",
+    name: "Customer Support Ticket Router",
+    description:
+      "Automatically categorize and route customer support tickets to the right team based on keywords, priority, and customer tier.",
+    tools: ["n8n", "Zendesk API", "OpenAI API", "Slack", "Airtable"],
+    impact: "Reduces ticket response time by 40%, ensures tickets reach correct specialist immediately.",
+    type: "Internal Project",
+    image: "/automation/ticket-router-demo.png",
+    longDescription:
+      "Uses AI (OpenAI) to analyze ticket content, automatically tags by category (billing, technical, sales), assigns priority, and routes to appropriate team in Slack. VIP customers get escalated automatically. All routing decisions logged in Airtable.",
+    howToSetup: [
+      "Connect Zendesk webhook for new ticket events.",
+      "Extract ticket content and customer data.",
+      "Send to OpenAI API for sentiment and category analysis.",
+      "Determine priority based on customer tier and keywords.",
+      "Route to appropriate Slack channel with formatted message.",
+      "Update Airtable with ticket ID, category, and assignment.",
+      "Send confirmation email to customer."
+    ],
+    video: "",
+    docsLink: "https://docs.google.com/document/d/ticket-router-setup",
+    codeSnippet: `// OpenAI analysis\nconst analysis = await openai.chat({\n  model: "gpt-4",\n  messages: [{\n    role: "system",\n    content: "Categorize support ticket..."\n  }]\n});`
+  },
+  {
+    id: "data-backup-archive",
+    name: "Automated Data Backup & Archive",
+    description:
+      "Daily backup of critical databases and files to cloud storage (S3, Google Drive). Automatically archives old data based on retention policy.",
+    tools: ["n8n", "Cron", "PostgreSQL", "AWS S3", "Google Drive API", "Email"],
+    impact: "Ensures 99.9% data safety, automates compliance requirements, saves storage costs via smart archiving.",
+    type: "Real Client Project",
+    image: "/automation/backup-archive-demo.png",
+    longDescription:
+      "Performs scheduled full and incremental backups of databases and file systems. Backs up to AWS S3 and Google Drive simultaneously for redundancy. Automatically archives data older than retention period to cold storage, and sends daily backup status reports.",
+    howToSetup: [
+      "Configure database connection credentials.",
+      "Set up AWS S3 bucket and IAM permissions.",
+      "Create Google Drive folder for backups.",
+      "Create Cron trigger for daily backup (2 AM).",
+      "Execute pg_dump for PostgreSQL backup.",
+      "Compress backup files with timestamp.",
+      "Upload to S3 and Google Drive in parallel.",
+      "Check retention policy and archive old backups.",
+      "Send email report with backup status and size."
+    ],
+    video: "",
+    docsLink: "https://docs.google.com/document/d/backup-archive-guide",
+    codeSnippet: `# Backup script\npg_dump -h $DB_HOST -U $DB_USER $DB_NAME | \\\n  gzip > backup_$(date +%Y%m%d).sql.gz\n\n# Upload to S3\naws s3 cp backup_*.sql.gz s3://backup-bucket/`
+  },
+  {
+    id: "order-fulfillment-workflow",
+    name: "E-commerce Order Fulfillment Workflow",
+    description:
+      "Automatically process orders from multiple channels, update inventory, generate shipping labels, and send tracking updates to customers.",
+    tools: ["n8n", "Shopify", "WooCommerce", "ShipStation API", "Email", "SMS"],
+    impact: "Reduces order processing time from 2 hours to 15 minutes, eliminates human errors, improves customer satisfaction.",
+    type: "SME Client",
+    image: "/automation/order-fulfillment-demo.png",
+    longDescription:
+      "When an order is placed, this workflow automatically validates inventory, reserves items, generates shipping label via ShipStation, updates order status across all platforms, sends tracking information via email and SMS, and logs everything for analytics.",
+    howToSetup: [
+      "Connect webhooks from Shopify and WooCommerce for new orders.",
+      "Validate inventory availability in real-time.",
+      "Reserve items to prevent overselling.",
+      "Generate shipping label using ShipStation API.",
+      "Update order status to 'Processing' in source platform.",
+      "Send confirmation email with order details.",
+      "Send SMS with tracking number when shipped.",
+      "Update inventory levels across all channels.",
+      "Log order details to analytics database."
+    ],
+    video: "",
+    docsLink: "https://docs.google.com/document/d/order-fulfillment-guide",
+    codeSnippet: `// ShipStation label request\n{\n  "orderId": "{{$json.order_id}}",\n  "carrierCode": "fedex",\n  "serviceCode": "fedex_ground",\n  "shipDate": "{{$now}}"\n}`
+  },
 ];

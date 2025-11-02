@@ -11,6 +11,19 @@ const toolColors = {
   Telegram: "#2597d8",
   IMAP: "#1083c8",
   Airtable: "#f26b3a",
+  "Shopify API": "#96bf48",
+  "WooCommerce API": "#96588a",
+  PostgreSQL: "#336791",
+  "Instagram API": "#e4405f",
+  "Facebook Graph API": "#1877f2",
+  Cron: "#f9d71c",
+  "Zendesk API": "#03363d",
+  "OpenAI API": "#10a37f",
+  "AWS S3": "#ff9900",
+  "Google Drive API": "#4285f4",
+  Email: "#ea4335",
+  SMS: "#34c759",
+  "ShipStation API": "#00a8e8",
 };
 
 const typeBadgeColors = {
