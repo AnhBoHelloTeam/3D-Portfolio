@@ -37,15 +37,15 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_na7idoi", // Service ID
-        "template_76pkajm", // Template ID
+        "service_na7idoi",
+        "template_76pkajm",
         {
-          name: form.name,        // Phải khớp với {{name}} trong template
-          email: form.email,      // Phải khớp với {{email}} trong template
-          message: form.message,  // Phải khớp với {{message}} trong template
-          to_email: "nhanhateku1@gmail.com",  // Email nhận
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          to_email: "nhanhateku1@gmail.com",
         },
-        "r1dk6_F-NXVzxgnWX"  // Public Key
+        "r1dk6_F-NXVzxgnWX"
       )
       .then(
         () => {
