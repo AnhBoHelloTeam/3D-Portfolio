@@ -28,37 +28,8 @@ const detectDevToolsOpen = () => {
   }, 500);
 };
 
-// Disable right-click context menu (optional)
-const disableRightClick = () => {
-  document.addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-    return false;
-  });
-  
-  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-  document.addEventListener('keydown', (e) => {
-    // F12
-    if (e.keyCode === 123) {
-      e.preventDefault();
-      return false;
-    }
-    // Ctrl+Shift+I (DevTools)
-    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-      e.preventDefault();
-      return false;
-    }
-    // Ctrl+Shift+J (Console)
-    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
-      e.preventDefault();
-      return false;
-    }
-    // Ctrl+U (View Source)
-    if (e.ctrlKey && e.keyCode === 85) {
-      e.preventDefault();
-      return false;
-    }
-  });
-};
+// Không disable DevTools để bạn có thể debug khi cần
+// Chỉ cảnh báo khi mở DevTools, không block
 
 // Thêm copyright watermark (subtle)
 const addWatermark = () => {
@@ -80,14 +51,9 @@ const addWatermark = () => {
 // Initialize protection
 export const initProtection = (options = {}) => {
   const { 
-    disableRightClickMenu = true, 
     detectDevTools = true,
     addCopyrightWatermark = true 
   } = options;
-
-  if (disableRightClickMenu) {
-    disableRightClick();
-  }
 
   if (detectDevTools) {
     detectDevToolsOpen();

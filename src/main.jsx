@@ -6,8 +6,8 @@ import "./index.css";
 import { initProtection } from "./utils/protection";
 
 // Initialize simple anti-clone protection
+// Chỉ cảnh báo, không block DevTools (để bạn có thể debug)
 initProtection({
-  disableRightClickMenu: true,
   detectDevTools: true,
   addCopyrightWatermark: true
 });
