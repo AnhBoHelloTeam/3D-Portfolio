@@ -699,3 +699,43 @@ aws s3 cp backup_*.sql.gz s3://backup-bucket/`
 }`
   }
 ];
+
+// Tool colors for automation project badges
+export const toolColors = {
+  n8n: "#dc7407",
+  "Google Sheets": "#20c35b",
+  Slack: "#4a154b",
+  "REST API": "#2b7bb9",
+  Webhooks: "#7a6ffb",
+  Telegram: "#2597d8",
+  IMAP: "#1083c8",
+  Airtable: "#f26b3a",
+  "Shopify API": "#96bf48",
+  "WooCommerce API": "#96588a",
+  PostgreSQL: "#336791",
+  "Instagram API": "#e4405f",
+  "Facebook Graph API": "#1877f2",
+  Cron: "#f9d71c",
+  "Zendesk API": "#03363d",
+  "OpenAI API": "#10a37f",
+  "AWS S3": "#ff9900",
+  "Google Drive API": "#4285f4",
+  Email: "#ea4335",
+  SMS: "#34c759",
+  "ShipStation API": "#00a8e8",
+};
+
+// Type badge colors for automation projects
+export const typeBadgeColors = {
+  "SME Client": "bg-green-100 text-green-800 border-green-400",
+  "Internal Project": "bg-blue-100 text-blue-800 border-blue-400",
+  "Real Client Project": "bg-orange-100 text-orange-800 border-orange-300",
+};
+
+// EmailJS configuration
+export const emailjsConfig = {
+  serviceId: "service_na7idoi",
+  templateId: "template_76pkajm",
+  publicKey: "r1dk6_F-NXVzxgnWX",
+  toEmail: "nhanhateku1@gmail.com",
+};

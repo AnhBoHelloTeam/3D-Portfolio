@@ -6,6 +6,8 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { emailjsConfig } from "../constants";
+import { validateContactForm } from "../utils/validation";
 import gitImage from "../assets/tech/github.png";
 import linkedInImage from "../assets/tech/linkedin.png";
 import resumeImage from "../assets/tech/resume.png";
@@ -19,33 +21,40 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: "" });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      alert("Please fill out all fields before submitting.");
+    const validation = validateContactForm(form);
+    if (!validation.isValid) {
+      setErrors(validation.errors);
       return;
     }
 
+    setErrors({});
     setLoading(true);
 
     emailjs
       .send(
-        "service_na7idoi",
-        "template_76pkajm",
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
         {
           name: form.name,
           email: form.email,
           message: form.message,
-          to_email: "nhanhateku1@gmail.com",
+          to_email: emailjsConfig.toEmail,
         },
-        "r1dk6_F-NXVzxgnWX"
+        emailjsConfig.publicKey
       )
       .then(
         () => {
@@ -131,8 +140,13 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.name ? "border-2 border-red-500" : ""
+              }`}
             />
+            {errors.name && (
+              <span className="text-red-400 text-sm mt-1">{errors.name}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your email</span>
@@ -142,8 +156,13 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.email ? "border-2 border-red-500" : ""
+              }`}
             />
+            {errors.email && (
+              <span className="text-red-400 text-sm mt-1">{errors.email}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -153,8 +172,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${
+                errors.message ? "border-2 border-red-500" : ""
+              }`}
             />
+            {errors.message && (
+              <span className="text-red-400 text-sm mt-1">{errors.message}</span>
+            )}
           </label>
 
           <button

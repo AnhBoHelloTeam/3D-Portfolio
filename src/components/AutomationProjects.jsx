@@ -1,43 +1,30 @@
 import React from "react";
-import { automationProjects } from "../constants";
+import { motion } from "framer-motion";
+import { automationProjects, toolColors } from "../constants";
 import { useNavigate } from "react-router-dom";
-
-const toolColors = {
-  n8n: "#dc7407",
-  "Google Sheets": "#20c35b",
-  Slack: "#4a154b",
-  "REST API": "#2b7bb9",
-  Webhooks: "#7a6ffb",
-  Telegram: "#2597d8",
-  IMAP: "#1083c8",
-  Airtable: "#f26b3a",
-  "Shopify API": "#96bf48",
-  "WooCommerce API": "#96588a",
-  PostgreSQL: "#336791",
-  "Instagram API": "#e4405f",
-  "Facebook Graph API": "#1877f2",
-  Cron: "#f9d71c",
-  "Zendesk API": "#03363d",
-  "OpenAI API": "#10a37f",
-  "AWS S3": "#ff9900",
-  "Google Drive API": "#4285f4",
-  Email: "#ea4335",
-  SMS: "#34c759",
-  "ShipStation API": "#00a8e8",
-};
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "../styles";
 
 const AutomationProjects = () => {
   const navigate = useNavigate();
   return (
-    <section className="w-full my-14 px-4 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-2 text-center">Automation Projects (n8n Workflows)</h2>
-      <p className="text-center text-gray-500 mb-8 text-base max-w-2xl mx-auto">
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Automation Solutions</p>
+        <h2 className={styles.sectionHeadText}>Automation Projects.</h2>
+      </motion.div>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] text-justify break-all"
+      >
         Automation solutions and business workflows built with <span className="font-bold text-orange-600">n8n</span>, designed for effectiveness, reliability, and productivity.
-      </p>
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
+      </motion.p>
+      <div className="mt-20 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
         {automationProjects.map((proj, idx) => (
-          <div
+          <motion.div
             key={proj.id}
+            variants={fadeIn("up", "spring", idx * 0.1, 0.75)}
             className="bg-white rounded-2xl shadow-md border border-gray-200 p-6 flex flex-col justify-between hover:shadow-lg transition group cursor-pointer"
             onClick={() => navigate(`/automation/${proj.id}`)}
             style={{ position: "relative" }}
@@ -66,11 +53,11 @@ const AutomationProjects = () => {
                 <b>Impact:</b> {proj.impact}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </section>
+    </>
   );
 };
 
-export default AutomationProjects;
+export default SectionWrapper(AutomationProjects, "automation");
