@@ -121,17 +121,49 @@ const Navbar = () => {
             );
           })}
           <li
-            className={`${active === "View CV Online" ? "text-yellow-300" : "text-secondary"} hover:text-yellow-400 text-[18px] font-bold cursor-pointer transition`}
+            className={`${active === "View CV Online" ? "text-yellow-300" : "text-secondary"} hover:text-yellow-400 text-[18px] font-bold cursor-pointer transition flex items-center gap-2`}
             style={{border: '1px solid #fcd34d', borderRadius: 6, padding: "0 12px", margin: '0 4px'}}
             onClick={handleViewCv}
           >
-            View CV Online
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              />
+            </svg>
+            <span>CV</span>
           </li>
           <li
-            className={`${active === "Download CV" ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
+            className={`${active === "Download CV" ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer flex items-center gap-2`}
             onClick={handleCvDownload}
           >
-            Download CV
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            <span>CV</span>
           </li>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -183,23 +215,55 @@ const Navbar = () => {
                 );
               })}
               <li
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === "View CV Online" ? "text-yellow-300" : "text-secondary"}`}
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === "View CV Online" ? "text-yellow-300" : "text-secondary"} flex items-center gap-2`}
                 style={{border: '1px solid #fcd34d', borderRadius: 6, padding: "0 12px", margin: '0 4px'}}
                 onClick={() => {
                   setToggle(false);
                   handleViewCv();
                 }}
               >
-                View CV Online
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                <span>CV</span>
               </li>
               <li
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === "Download CV" ? "text-white" : "text-secondary"}`}
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === "Download CV" ? "text-white" : "text-secondary"} flex items-center gap-2`}
                 onClick={() => {
                   setToggle(false);
                   handleCvDownload();
                 }}
               >
-                Download CV
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                <span>CV</span>
               </li>
             </ul>
           </div>
