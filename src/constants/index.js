@@ -43,8 +43,22 @@ export const navLinks = [
     title: "Technology",
   },
   {
-    id: "project",
-    title: "Project",
+    id: "portfolio",
+    title: "Portfolio",
+    dropdown: [
+      {
+        id: "project",
+        title: "My work",
+      },
+      {
+        id: "client-projects",
+        title: "Web Services",
+      },
+      {
+        id: "automation",
+        title: "Automation Solutions",
+      },
+    ],
   },
   {
     id: "contact",
@@ -739,3 +753,85 @@ export const emailjsConfig = {
   publicKey: "r1dk6_F-NXVzxgnWX",
   toEmail: "nhanhateku1@gmail.com",
 };
+
+// Client Projects - Web & App
+export const clientWebProjects = [
+  {
+    id: "ht-nails",
+    name: "HT Nails",
+    url: "https://soho.vluxai.com/",
+    domain: "soho.vluxai.com",
+    image: "https://vluxai.com/wp-content/uploads/2025/12/soho.vluxai.com_-1-scaled.png",
+    transform: "perspective(1200px) rotateY(-12deg) translateZ(0)",
+    shadow: "0 30px 80px rgba(102, 126, 234, 0.4), 0 0 40px rgba(79, 172, 254, 0.3)",
+    height: 600,
+  },
+  {
+    id: "soho-nails",
+    name: "Soho Nails",
+    url: "https://sohonails.com.au/",
+    domain: "sohonails.com.au",
+    image: "https://vluxai.com/wp-content/uploads/2025/12/sohonails.com_.au_-scaled.png",
+    transform: "perspective(1200px) rotateY(-5deg) translateZ(20px) scale(1.05)",
+    shadow: "0 40px 100px rgba(240, 147, 251, 0.5), 0 0 60px rgba(79, 172, 254, 0.4)",
+    height: 650,
+    zIndex: 2,
+  },
+  {
+    id: "restaurant-booking",
+    name: "Restaurant Booking",
+    url: "https://restauntbooking.vluxai.com/",
+    domain: "restauntbooking.vluxai.com",
+    image: "https://vluxai.com/wp-content/uploads/2025/12/restauntbooking.vluxai.com_-1-scaled.png",
+    transform: "perspective(1200px) rotateY(5deg) translateZ(20px) scale(1.05)",
+    shadow: "0 40px 100px rgba(79, 172, 254, 0.5), 0 0 60px rgba(67, 233, 123, 0.4)",
+    height: 650,
+    zIndex: 2,
+  },
+  {
+    id: "austrix",
+    name: "Austrix",
+    url: "https://austrix.vluxai.com/",
+    domain: "austrix.vluxai.com",
+    image: "https://vluxai.com/wp-content/uploads/2025/12/austrix.vluxai.com_-scaled.png",
+    transform: "perspective(1200px) rotateY(12deg) translateZ(0)",
+    shadow: "0 30px 80px rgba(250, 112, 154, 0.4), 0 0 40px rgba(254, 225, 64, 0.3)",
+    height: 600,
+  },
+];
+
+// Client Projects - QR Landing
+export const clientQRProjects = [
+  {
+    id: "dr-ngoc-hoang-le",
+    name: "DR NGOC HOANG LE",
+    url: "https://vluxai.com/vi/card_doctor_1/",
+    description: "Digital business card with QR code. Scan to view contact information, book appointments and get directions.",
+    images: [
+      "https://vluxai.com/wp-content/uploads/2025/12/z7293664615460_4f42376a510a534030de6ff1144b084b-scaled.jpg",
+    ],
+    layout: "single",
+  },
+  {
+    id: "dr-dzung-le",
+    name: "DR DZUNG LE",
+    url: "https://vluxai.com/dr-dzungleqr/",
+    description: "QR landing for pediatrician. Display specialty information, work schedule and online appointment booking.",
+    images: [
+      "https://vluxai.com/wp-content/uploads/2025/12/z7293671852415_bad361c4d6a4f5b406015885833a7cba.jpg",
+      "https://vluxai.com/wp-content/uploads/2025/12/Bsinhi.png",
+    ],
+    layout: "double",
+  },
+  {
+    id: "ht-nails-qr",
+    name: "HT Nails",
+    url: "https://soho.vluxai.com/ht-nails-qr/",
+    description: "QR landing for nail salon. Customers scan QR to view services, pricing and book nail appointments.",
+    images: [
+      "https://vluxai.com/wp-content/uploads/2025/12/z7316681200897_43f226deca7b6d51eef88241291d8dbd.jpg",
+      "https://vluxai.com/wp-content/uploads/2025/12/z7308574569918_f268e6e6e6386222480c6861d7890f48.jpg",
+    ],
+    layout: "double",
+  },
+];

@@ -9,6 +9,7 @@ const Experience = lazy(() => import("./components/Experience"));
 const Tech = lazy(() => import("./components/Tech"));
 const Works = lazy(() => import("./components/Works"));
 const AutomationProjects = lazy(() => import("./components/AutomationProjects"));
+const ClientProjects = lazy(() => import("./components/ClientProjects"));
 const Feedbacks = lazy(() => import("./components/Feedbacks"));
 const Contact = lazy(() => import("./components/Contact"));
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
@@ -32,6 +33,9 @@ const MainPortfolio = () => (
     </Suspense>
     <Suspense fallback={null}>
       <Works />
+    </Suspense>
+    <Suspense fallback={null}>
+      <ClientProjects />
     </Suspense>
     <Suspense fallback={null}>
       <AutomationProjects />

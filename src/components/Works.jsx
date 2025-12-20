@@ -30,7 +30,7 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
             loading="lazy"
             decoding="async"
-            fetchPriority="low"
+            fetchpriority="low"
             onError={(e) => {
               e.currentTarget.onerror = null;
               e.currentTarget.src = github;
