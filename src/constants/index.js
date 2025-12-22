@@ -143,10 +143,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2025 - Present",
     points: [
-       "Worked on small - medium projects for international clients, focusing on responsive design and functionality.",
-      "Used React, Node.js, MongoDB, and Flutter to create applications based on client needs.",
-      "Communicated with clients to understand requirements and provide updates.",
-      "Practiced deploying applications to cloud platforms and giving post-delivery support.",
+      "Delivered multiple web and mobile projects for international clients, focusing on responsive UI and stable functionality.",
+      "Built applications using React, Nestjs, Nextjs and Flutter based on real-world client requirements.",
+      "Translated client requirements into scalable and maintainable applications with clean UI/UX.",
+      "Collaborated remotely with clients to manage timelines, handle feedback, and ensure on-time delivery.",
     ],
   },
   {
