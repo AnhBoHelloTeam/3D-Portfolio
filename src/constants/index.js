@@ -237,7 +237,7 @@ const projects = [
     ],
     image: badnhan,
     source_code_link: "https://github.com/AnhBoHelloTeam/3D-Portfolio.git",
-    live_demo_link: "https://nhanngfolio.onrender.com/",
+    live_demo_link: "https://nhanng-3dporfolio.vercel.app/",
   },
   {
     name: "NhanNG | Portfolio Application",
