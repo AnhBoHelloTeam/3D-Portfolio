@@ -47,12 +47,8 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px] text-justify break-all"
       >
-        I'm a passionate IT student with a love for coding and problem-solving.<br></br>
-        I started by exploring how software shapes our world through self-learning and projects, from web apps to backend systems.
-        Skilled in C++, Node.js, Spring Boot, Python, Django, and currently learning Flutter & NestJS, I enjoy turning ideas into functional solutions.
-        I’ve built personal projects, provided technical support at DongA University, and managed SEO for a local business, gaining real-world experience.
-        I’m seeking internship or job opportunities in Da Nang as a fullstack developer.
-        Contact: nhanng.thdhk4@gmail.com – Let’s build something amazing!      
+        Full-stack developer passionate about 3D web experiences and automation. Skilled in React, Next.js, Node.js/NestJS, Flutter, and Three.js, I specialize in turning ideas into interactive, performant applications.<br></br>
+        With hands-on experience building production-ready e-commerce platforms, automation workflows, and modern web applications, I bring a strong focus on clean code, scalable architecture, and exceptional user experiences. Whether it&apos;s crafting immersive 3D interfaces with Three.js or streamlining business processes through intelligent automation, I&apos;m dedicated to delivering solutions that make a real impact.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
