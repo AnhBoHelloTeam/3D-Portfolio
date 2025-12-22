@@ -130,10 +130,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "June 2025 - Present",
     points: [
-      "Assisted in creating automation workflows using n8n to support business operations.",
-      "Helped integrate different systems to reduce manual tasks and improve data flow.",
-      "Worked with team members to identify possible automation solutions.",
-      "Learned to monitor and maintain automation processes for stability.",
+      "Built and maintained 15+ automation workflows using n8n to support daily business operations.",
+      "Integrated multiple systems (Google Sheets, APIs, Email, Webhooks) to reduce manual processing time by ~40%.",
+      "Collaborated with team members to analyze workflows and identify automation opportunities.",
+      "Monitored and optimized workflows to ensure stable performance and data accuracy.",
     ],
   },
   {
