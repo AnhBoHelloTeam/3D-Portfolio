@@ -8,7 +8,6 @@ import {
   reactjs,
   nodejs,
   nextjs,
-  self,
   Souvenir,
   elecWeb,
   elecAppP,
@@ -164,27 +163,13 @@ const experiences = [
     ],
   },
   {
-    title: "IT Support Assistant (Part-time)",
-    company_name: "Independent Contractor",
-    icon: self,
-    iconBg: "#E6DEDD",
-    date: "Dec 2022 - Nov 2024",
-    points: [
-      "Helped troubleshoot software and hardware issues for students and teachers.",
-      "Assisted in installing operating systems and development tools.",
-      "Provided basic guidance on fixing and improving system performance.",
-    ],
-  },
-  {
-    title: "Sales Consultant & Technical Support",
-    company_name: "Chinh Nguyen Computer",
+    title: "IT Support",
+    company_name: "IT Support + Chinh Nguyen Computer",
     icon: CN,
     iconBg: "#E6DEDD",
     date: "Sep 2022 - Nov 2024",
     points: [
-       "Advised customers on suitable products and solutions.",
-      "Assisted in repairing hardware and installing software.",
-      "Helped with SEO tasks and posted advertisements on social platforms.",
+      "2+ years of hands-on experience in IT support, system setup, troubleshooting, and basic development environment configuration.",
     ],
   },
 ];
