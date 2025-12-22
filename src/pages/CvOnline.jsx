@@ -1,13 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const imgStyle = {
+const iframeStyle = {
   maxWidth: "900px",
   width: "100%",
+  height: "1200px",
   margin: "32px auto",
   display: "block",
   boxShadow: "0 8px 32px rgba(30,30,30,0.2)",
   borderRadius: "16px",
+  border: "none",
 };
 
 export default function CvOnline() {
@@ -38,9 +40,11 @@ export default function CvOnline() {
       <h3 style={{ textAlign: "center", marginBottom: 28, color: "#444", letterSpacing: 1 }}>
         Resume &amp; Career
       </h3>
-      <img src="/cv1.jpg" alt="CV page 1" style={imgStyle} loading="lazy" decoding="async" />
-      <img src="/cv2.jpg" alt="CV page 2" style={imgStyle} loading="lazy" decoding="async" />
-      <img src="/cv3.jpg" alt="CV page 3" style={imgStyle} loading="lazy" decoding="async" />
+      <iframe
+        src="/NguyenThanhNhan_CVFullStack.pdf"
+        style={iframeStyle}
+        title="CV - Nguyen Thanh Nhan"
+      />
     </div>
   );
 }

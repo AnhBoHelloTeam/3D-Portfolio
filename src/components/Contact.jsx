@@ -11,7 +11,6 @@ import { validateContactForm } from "../utils/validation";
 import gitImage from "../assets/tech/github.png";
 import linkedInImage from "../assets/tech/linkedin.png";
 import resumeImage from "../assets/tech/resume.png";
-import fullstackpdf from "../assets/fullstack.pdf";
 
 const Contact = () => {
   const formRef = useRef();
@@ -112,8 +111,8 @@ const Contact = () => {
             <span className="text-xl">LinkedIn</span>
           </a>
           <a
-            href={fullstackpdf}
-            download="fullstack.pdf"
+            href="/NguyenThanhNhan_CVFullStack.pdf"
+            download="NguyenThanhNhan_CVFullStack.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 px-4 py-3 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-medium rounded-xl transition duration-300 transform hover:scale-105 shadow-lg w-full sm:w-auto"

@@ -6,7 +6,7 @@ import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 // ĐÃ XOÁ HOÀN TOÀN fullstack.pdf
 
-const CV_FILENAME = "NguyenThanhNhan_Fullstack_3DPortfolio.pdf";
+const CV_FILENAME = "NguyenThanhNhan_CVFullStack.pdf";
 const CV_PATH = "/" + CV_FILENAME;
 
 const Navbar = () => {
