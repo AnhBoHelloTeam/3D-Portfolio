@@ -150,17 +150,17 @@ const experiences = [
     ],
   },
   {
-    title: "Junior Full Stack Developer",
+    title: "Intern Full Stack Developer",
     company_name: "ICT Đông Á",
     icon: ICT,
     iconBg: "#E6DEDD",
     date: "May 2025 - August 2025",
     points: [
-      "Contributed to building a souvenir e-commerce website with features like shopping cart, payments, promotions, and real-time chat/messaging.",
-      "Helped implement WebSocket for instant communication between users and shops.",
-      "Assisted in developing backend APIs using Node.js and MongoDB.",
-      "Supported improvements to the React.js front-end for a smoother shopping experience.",
-      "Gained experience in teamwork, task sharing, and solving technical problems in a group project.",
+      "Participated in building a production-ready souvenir e-commerce website using React, Node.js, MongoDB, and WebSocket.",
+      "Implemented shopping cart, payment gateway integration, promotions, and real-time chat features.",
+      "Designed and consumed RESTful APIs to support core business logic and data flow.",
+      "Enhanced front-end responsiveness and usability to improve the customer shopping experience.",
+      "Worked collaboratively in a team to deliver features on schedule and resolve technical challenges.",
     ],
   },
   {
