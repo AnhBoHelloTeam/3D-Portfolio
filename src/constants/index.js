@@ -26,6 +26,7 @@ import {
   lamda,
   terms,
   vlux_ai_icon,
+  highscores,
 } from "../assets";
 
 export const navLinks = [
@@ -113,7 +114,7 @@ const experiences = [
     company_name: "VLUX AI",
     icon: vlux_ai_icon,
     iconBg: "#E6DEDD",
-    date: "August 2025 - Present", 
+    date: "August 2025 - February 2026", 
     points: [
       "Develop and deploy cutting-edge Automation & AI solutions for SMEs in Australia, Canada, and Vietnam, aligning with VLUX AI's core service offerings.",
       "Design and implement complex automation workflows using n8n to integrate disparate systems, streamline business operations, and enhance data flow efficiency.",
@@ -123,11 +124,22 @@ const experiences = [
     ],
   },
   {
+    title: "Front-End Developer (Remote)",
+    company_name: "HighScores.ai",
+    icon: highscores,
+    iconBg: "#E6DEDD",
+    date: "July 2025 - November 2025",
+    points: [
+      "Integrated APIs and developed interface components, layouts, and system functionalities based on Figma mockups and Jira requirements.",
+      "Collaborated with cross-functional teams to manage daily tasks, track progress, and deliver features on schedule.",
+    ],
+  },
+  {
     title: "Automation & Workflow Assistant (N8N)",
     company_name: "COWI Autobiz",
     icon: cowi,
     iconBg: "#E6DEDD",
-    date: "June 2025 - Present",
+    date: "June 2025 - September 2025",
     points: [
       "Built and maintained 15+ automation workflows using n8n to support daily business operations.",
       "Integrated multiple systems (Google Sheets, APIs, Email, Webhooks) to reduce manual processing time by ~40%.",

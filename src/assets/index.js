@@ -25,6 +25,7 @@ import ICT from "./company/ICT.png";
 import CN from "./company/CN.png";
 import cowi from "./company/cowi.png"
 import vlux_ai_icon from "./company/LOGO_VLUX.png";
+import highscores from "./company/highscores.webp";
 
 // testimonials
 
@@ -77,4 +78,5 @@ export {
   lamda,
   terms,
   vlux_ai_icon,
+  highscores,
 };
