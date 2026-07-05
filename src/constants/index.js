@@ -416,29 +416,6 @@ const projects = [
     source_code_link: "https://github.com/AnhBoHelloTeam/Shop_Fontend_Flutter.git",
     live_demo_link: "https://shop-flutter-1c992.firebaseapp.com/",
   },
-  
-  {
-    name: "React API Read Comics",
-    description:
-      "A web application for reading comics online using React and an API to fetch data from the server. Supports search, category filters, user login, and an admin panel for content management.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "api",
-        color: "green-text-gradient",
-      },
-      {
-        name: "nodejs",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: APITruyen,
-    source_code_link: "https://github.com/AnhBoHelloTeam/ReactAPIReadTruyenNhanNG.git",
-    live_demo_link: "https://reactapireadtruyennhanng.onrender.com/",
-  },
   {
     name: "Product Management Software",
     description:
@@ -462,26 +439,31 @@ const projects = [
     live_demo_link: "https://one23fakturera-fe.onrender.com",
   },
   {
-    name: "Fast Food Web App",
+    name: "Karimi Dry Food | Vegetarian Landing Page",
     description:
-      "A food ordering platform built with NestJS, React, and MySQL. Includes menu browsing, order placement, price calculation, and order tracking. Designed for restaurants to manage online orders efficiently.",
+      "A premium, highly responsive landing page showcasing healthy vegetarian and organic dry foods. Features clean layout designs, smooth performance, and optimized search engine visibility.",
     tags: [
-      {
-        name: "nestjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "react",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "pink-text-gradient",
-      },
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "seo", color: "green-text-gradient" },
+      { name: "responsive", color: "pink-text-gradient" },
     ],
-    image: FastfoodWeb,
-    source_code_link: "https://github.com/AnhBoHelloTeam/fastfood-app_NetJS_fontent.git",
-    live_demo_link: "https://fastfood-app-netjs-fontent.onrender.com/",
+    image: "/karimidryfood.png",
+    source_code_link: "",
+    live_demo_link: "https://karimidryfood.vluxai.com/",
+  },
+  {
+    name: "AlgoBattle | 1v1 Coding Platform",
+    description:
+      "A real-time competitive programming arena. Features automated secure code execution sandbox (judge node), dynamic Elo matchmaking pool via Redis, real-time WebSocket communication, and Elo calculations with rank protection shields.",
+    tags: [
+      { name: "reactjs", color: "blue-text-gradient" },
+      { name: "nestjs", color: "green-text-gradient" },
+      { name: "redis", color: "pink-text-gradient" },
+      { name: "socketio", color: "blue-text-gradient" },
+    ],
+    image: "/algobattle.png",
+    source_code_link: "",
+    live_demo_link: "https://www.algobattle.site/",
   },
 ];
 
