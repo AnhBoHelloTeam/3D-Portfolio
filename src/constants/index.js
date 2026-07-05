@@ -112,6 +112,7 @@ const experiences = [
   {
     title: "AI Automation & Development Specialist",
     company_name: "VLUX AI",
+    url: "https://vluxai.com/",
     icon: vlux_ai_icon,
     iconBg: "#E6DEDD",
     date: "August 2025 - February 2026", 
@@ -131,15 +132,15 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "July 2025 - November 2025",
     points: [
-      "Translated high-fidelity Figma UI/UX designs into pixel-perfect, highly responsive React.js components, ensuring a seamless experience across all device sizes.",
-      "Integrated and consumed complex RESTful APIs, managing client-side state and implementing efficient data-fetching strategies for dynamic content.",
-      "Collaborated closely in an Agile/Scrum team structure, managing daily sprint tasks on Jira and participating in stand-ups to align on project milestones.",
-      "Optimized front-end rendering performance, resulting in faster page load speeds and improved overall lighthouse scores.",
+      "Successfully migrated web platform from Angular to Next.js, boosting performance, rendering, and SEO.",
+      "Converted Figma UI/UX mockups into clean, responsive, and reusable React/Next.js components.",
+      "Integrated backend RESTful APIs and managed daily tasks in an Agile scrum flow using Jira.",
     ],
   },
   {
     title: "Automation & Workflow Assistant (N8N)",
     company_name: "COWI Autobiz",
+    url: "https://cowiautobiz.com/",
     icon: cowi,
     iconBg: "#E6DEDD",
     date: "June 2025 - September 2025",
