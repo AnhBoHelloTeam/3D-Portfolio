@@ -36,11 +36,11 @@ const ProjectCard = ({
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(source_code_link || "https://github.com/AnhBoHelloTeam", "_blank")}
               className="bg-sky-500 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-2"
               tabIndex={0}
               role="button"
-              onKeyDown={e => e.key === "Enter" && window.open(source_code_link, "_blank")}
+              onKeyDown={e => e.key === "Enter" && window.open(source_code_link || "https://github.com/AnhBoHelloTeam", "_blank")}
             >
               <img
                 src={github}
