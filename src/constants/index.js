@@ -131,8 +131,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "July 2025 - November 2025",
     points: [
-      "Integrated APIs and developed interface components, layouts, and system functionalities based on Figma mockups and Jira requirements.",
-      "Collaborated with cross-functional teams to manage daily tasks, track progress, and deliver features on schedule.",
+      "Translated high-fidelity Figma UI/UX designs into pixel-perfect, highly responsive React.js components, ensuring a seamless experience across all device sizes.",
+      "Integrated and consumed complex RESTful APIs, managing client-side state and implementing efficient data-fetching strategies for dynamic content.",
+      "Collaborated closely in an Agile/Scrum team structure, managing daily sprint tasks on Jira and participating in stand-ups to align on project milestones.",
+      "Optimized front-end rendering performance, resulting in faster page load speeds and improved overall lighthouse scores.",
     ],
   },
   {
