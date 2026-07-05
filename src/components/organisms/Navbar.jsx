@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { styles } from "../../styles";
+import { navLinks } from "../../constants";
+import { logo, menu, close } from "../../assets";
 // ĐÃ XOÁ HOÀN TOÀN fullstack.pdf
 
 const CV_FILENAME = "NguyenThanhNhan_CVFullStack.pdf";

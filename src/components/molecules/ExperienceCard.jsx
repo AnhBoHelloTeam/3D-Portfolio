@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
-
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
@@ -38,7 +28,18 @@ const ExperienceCard = ({ experience }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {experience.url ? (
+            <a
+              href={experience.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors duration-200 underline"
+            >
+              {experience.company_name}
+            </a>
+          ) : (
+            experience.company_name
+          )}
         </p>
       </div>
 
@@ -56,23 +57,4 @@ const ExperienceCard = ({ experience }) => {
   );
 };
 
-const Experience = () => {
-  return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-      </motion.div>
-
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
-    </>
-  );
-};
-
-export default SectionWrapper(Experience, "work");
+export default ExperienceCard;

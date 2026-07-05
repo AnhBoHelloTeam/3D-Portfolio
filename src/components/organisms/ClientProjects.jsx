@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { clientWebProjects, clientQRProjects } from "../constants";
+import { styles } from "../../styles";
+import { SectionWrapper } from "../../hoc";
+import { fadeIn, textVariant } from "../../utils/motion";
+import { clientWebProjects, clientQRProjects } from "../../constants";
 
 const ClientProjects = () => {
   const [activeTab, setActiveTab] = useState("webapp");

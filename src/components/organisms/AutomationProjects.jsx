@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { automationProjects, toolColors } from "../constants";
+import { automationProjects, toolColors } from "../../constants";
 import { useNavigate } from "react-router-dom";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { styles } from "../styles";
+import { SectionWrapper } from "../../hoc";
+import { fadeIn, textVariant } from "../../utils/motion";
+import { styles } from "../../styles";
 
 const AutomationProjects = () => {
   const navigate = useNavigate();

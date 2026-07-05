@@ -2,15 +2,15 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { emailjsConfig } from "../constants";
-import { validateContactForm } from "../utils/validation";
-import gitImage from "../assets/tech/github.png";
-import linkedInImage from "../assets/tech/linkedin.png";
-import resumeImage from "../assets/tech/resume.png";
+import { styles } from "../../styles";
+import EarthCanvas from "../atoms/Earth";
+import { SectionWrapper } from "../../hoc";
+import { slideIn } from "../../utils/motion";
+import { emailjsConfig } from "../../constants";
+import { validateContactForm } from "../../utils/validation";
+import gitImage from "../../assets/tech/github.png";
+import linkedInImage from "../../assets/tech/linkedin.png";
+import resumeImage from "../../assets/tech/resume.png";
 
 const Contact = () => {
   const formRef = useRef();

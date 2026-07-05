@@ -1,18 +1,18 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Navbar from "./components/organisms/Navbar";
+import Hero from "./components/organisms/Hero";
 
-const About = lazy(() => import("./components/About"));
-const Experience = lazy(() => import("./components/Experience"));
-const Tech = lazy(() => import("./components/Tech"));
-const Works = lazy(() => import("./components/Works"));
-const AutomationProjects = lazy(() => import("./components/AutomationProjects"));
-const ClientProjects = lazy(() => import("./components/ClientProjects"));
-const Feedbacks = lazy(() => import("./components/Feedbacks"));
-const Contact = lazy(() => import("./components/Contact"));
-const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
+const About = lazy(() => import("./components/organisms/About"));
+const Experience = lazy(() => import("./components/organisms/Experience"));
+const Tech = lazy(() => import("./components/organisms/Tech"));
+const Works = lazy(() => import("./components/organisms/Works"));
+const AutomationProjects = lazy(() => import("./components/organisms/AutomationProjects"));
+const ClientProjects = lazy(() => import("./components/organisms/ClientProjects"));
+const Feedbacks = lazy(() => import("./components/organisms/Feedbacks"));
+const Contact = lazy(() => import("./components/organisms/Contact"));
+const StarsCanvas = lazy(() => import("./components/atoms/Stars"));
 const CvOnline = lazy(() => import("./pages/CvOnline"));
 const AutomationDetail = lazy(() => import("./pages/AutomationDetail"));
 

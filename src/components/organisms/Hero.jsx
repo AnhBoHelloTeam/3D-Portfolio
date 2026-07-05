@@ -1,8 +1,8 @@
 import React, { Suspense, lazy, useMemo } from "react";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-const ComputersCanvas = lazy(() => import("./canvas/Computers"));
+import { styles } from "../../styles";
+const ComputersCanvas = lazy(() => import("../atoms/Computers"));
 
 const Hero = () => {
   const prefersReducedMotion = useMemo(() => {
