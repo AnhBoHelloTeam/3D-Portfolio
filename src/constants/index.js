@@ -471,227 +471,242 @@ export { services, technologies, experiences, testimonials, projects };
 // Thêm mới automationProjects section
 export const automationProjects = [
   {
-    id: "crm-auto-lead-capture",
-    name: "CRM Auto-Lead Capture",
+    id: "ai-media-affiliate",
+    name: "AI Media Generator for Affiliate Marketing",
     description:
-      "Transform your website forms into a powerful lead generation machine. Every submission is instantly captured, categorized, and routed to your team with intelligent tagging and real-time notifications.",
-    tools: ["n8n", "Webhooks", "Google Sheets", "Slack"],
-    impact: "Saves 4 hours weekly, ensures 100% accurate group assignment.",
-    type: "SME Client",
+      "Tạo ảnh và video AI tự động cho các chiến dịch affiliate trên TikTok, YouTube. Tự động viết kịch bản, sinh ảnh và ghép thành video hoàn chỉnh.",
+    tools: ["n8n", "OpenAI API", "FFmpeg", "TikTok API", "YouTube API"],
+    impact: "Sản xuất hàng loạt 50+ video ngắn mỗi tuần, tăng lượng tiếp cận tự động.",
+    type: "Social Media Automation",
     image: "/automation/n81.png",
     longDescription:
-      "Say goodbye to manual lead entry and missed opportunities. This intelligent workflow seamlessly connects your website contact forms to a Google Sheets CRM system, automatically tagging each lead by source (organic search, paid ads, referrals, etc.), enriching data with validation, and delivering instant Slack notifications to your sales team. Leads are never lost, always categorized, and ready for follow-up within seconds. Perfect for growing businesses that want to scale their sales operations without hiring additional staff.",
+      "Hệ thống tự động hóa hoàn toàn quy trình xây dựng nội dung cho các kênh tiếp thị liên kết. Hệ thống sẽ cào các chủ đề hot, dùng OpenAI để tạo kịch bản chi tiết và sinh ảnh minh họa bằng DALL-E, sau đó chuyển văn bản thành giọng nói (TTS) và tự động dùng FFmpeg để render thành video ngắn (Reels/Shorts/TikTok), cuối cùng đăng tải trực tiếp lên các nền tảng mạng xã hội thông qua API.",
     howToSetup: [
-      "Step 1: Set up Webhook Trigger - In n8n, create a new workflow and add a 'Webhook' trigger node. Copy the webhook URL and integrate it with your website's form submission endpoint (using platforms like Typeform, Google Forms, or custom forms).",
-      "Step 2: Data Transformation - Add a 'Function' or 'Code' node to validate and clean incoming data (remove duplicates, format phone numbers, normalize email addresses). Include logic to detect lead source from form parameters or referrer data.",
-      "Step 3: Google Sheets Integration - Connect a 'Google Sheets' node configured to append rows to your CRM spreadsheet. Map form fields to columns (Name, Email, Phone, Source, Timestamp, Status). Enable auto-tagging by adding a 'Source' column that categorizes leads (e.g., 'Website Organic', 'Facebook Ad', 'LinkedIn').",
-      "Step 4: Slack Notifications - Add a 'Slack' node to send formatted messages to your sales channel when a new lead arrives. Include lead details, source tag, and a direct link to the spreadsheet row for quick access.",
-      "Step 5: Error Handling & Scheduling - Wrap critical nodes with error handling (Set node with 'Continue on Error'). Optionally add a 'Schedule Trigger' to generate daily lead summary reports. Test the workflow end-to-end with sample data before going live."
-    ],
-    video: "https://www.youtube.com/watch?v=fWtXJswvUcA",
-    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/",
-    codeSnippet: `POST /api/lead {
-  "name": "Nguyen Van A",
-  "source": "website",
-  "email": "a@gmail.com"
-}`
-  },
-  {
-    id: "auto-daily-report-alert",
-    name: "Auto Daily Report & Alert",
-    description:
-      "Turn chaos into clarity. Automatically pull sales data from all your channels, create beautiful dashboards, and deliver executive summaries right to your phone every morning—before you even open your laptop.",
-    tools: ["n8n", "Google Sheets", "Telegram", "REST API"],
-    impact: "Boosts reporting 1.5x; reduces copy-paste mistakes.",
-    type: "Internal Project",
-    image: "/automation/n82.png",
-    longDescription:
-      "Never waste another morning manually copying numbers from different platforms. This powerful automation connects to your Shopify, WooCommerce, Stripe, PayPal, and custom APIs to gather all sales metrics in one place. It calculates totals, compares daily/weekly/monthly performance, identifies top-selling products, and generates beautiful formatted reports in Google Sheets. Management receives instant Telegram alerts with key metrics, trends, and actionable insights—perfect for making data-driven decisions on the go. Built-in error handling ensures data never gets missed, with automatic retries and detailed logs.",
-    howToSetup: [
-      "Step 1: Configure API Credentials - In n8n, set up credentials for all your sales platforms (Shopify API key, WooCommerce Consumer Key/Secret, Stripe API key, etc.). Store these securely in n8n's credential manager for easy reuse.",
-      "Step 2: Schedule Daily Execution - Add a 'Schedule Trigger' node set to run daily at 6:00 AM (or your preferred time). Configure timezone and recurrence pattern. This ensures reports are ready when your team starts the day.",
-      "Step 3: Fetch & Aggregate Data - Create HTTP Request nodes for each sales channel API. Use 'Set' nodes to normalize data formats across platforms. Add a 'Merge' node to combine all sales data into a unified dataset. Include calculations for totals, averages, and growth percentages.",
-      "Step 4: Google Sheets Dashboard - Configure a 'Google Sheets' node to either create a new row in a daily report sheet or update an existing dashboard. Include columns for Date, Total Sales, Orders Count, Average Order Value, Top Product, and Growth vs. Previous Day.",
-      "Step 5: Telegram Alerts - Add a 'Telegram' node to send formatted messages to management group. Include emojis, charts summary, and key highlights. Use Telegram's formatting (bold, italics) for better readability. Add error handling with fallback notifications if data fetch fails."
-    ],
-    video: "https://www.youtube.com/watch?v=Zq9o_rq2WWo",
-    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.cron/",
-    codeSnippet: `curl -X POST https://domain/api/sync \n  -d '{"task":"sync sales", "date":"{{now}}"}'`
-  },
-  {
-    id: "email-invoice-bot",
-    name: "Email Invoice Bot",
-    description:
-      "Your accounting team's new best friend. This intelligent bot watches your inbox 24/7, extracts every invoice detail automatically, and keeps your financial records perfect—no human eyes needed.",
-    tools: ["n8n", "IMAP", "Airtable", "Telegram"],
-    impact: "Reduces 90% of manual work, zero missing invoices, full automation.",
-    type: "Real Client Project",
-    image: "/automation/n83.png",
-    longDescription:
-      "Accounting departments spend hours every week manually entering invoice data from emails into spreadsheets—until now. This sophisticated automation monitors your designated accounting inbox using IMAP, intelligently identifies invoice emails (by sender, subject patterns, or attachment types), extracts key information using advanced parsing (Order ID, invoice number, date, vendor name, amount, tax, payment terms), and automatically creates structured records in Airtable. The accounting team gets instant Telegram notifications with invoice summaries and links to view full details. Never miss an invoice, never make a data entry error, and never waste time on repetitive tasks again. Perfect for companies processing dozens or hundreds of invoices monthly.",
-    howToSetup: [
-      "Step 1: IMAP Email Configuration - Add an 'IMAP Email Trigger' node in n8n, connecting to your accounting email inbox (e.g., accounting@company.com). Configure authentication with app-specific password if needed. Set filters to only process emails from known vendors or with specific subject patterns like 'Invoice' or 'Bill'.",
-      "Step 2: Intelligent Parsing - Use a 'Function' or 'Code' node to extract invoice details from email body and attachments. Implement regex patterns or natural language processing to identify OrderID, Invoice Number, Date, Vendor, Amount, Tax, Payment Terms. For PDF attachments, consider using a PDF parsing service or OCR if needed.",
-      "Step 3: Airtable Database Setup - Create an Airtable base with columns: Invoice ID, Vendor, Date, Amount, Tax, Total, Status, Email Link, Attachments. Configure the 'Airtable' node in n8n to create new records with extracted data. Add validation to prevent duplicate entries using Invoice ID as unique identifier.",
-      "Step 4: Telegram Notifications - Set up a 'Telegram' bot and add a 'Telegram' node to send formatted alerts to your accounting team channel. Include invoice summary (Vendor, Amount, Due Date) and a direct link to the Airtable record. Use rich formatting for quick scanning.",
-      "Step 5: Testing & Error Handling - Test the workflow with sample invoice emails. Add error handling nodes to catch parsing failures, missing attachments, or API errors. Set up email alerts for critical failures. Optionally add a 'Wait' node to batch process multiple invoices before sending a summary notification."
-    ],
-    video: "https://www.youtube.com/watch?v=nEJ3lYGaq70",
-    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.emailtrigger/",
-    codeSnippet: `// n8n Function node
-return {
-  "OrderId": $json["order_id"],
-  "Amount": $json["total"]
-};`
-  },
-  {
-    id: "social-media-auto-posting",
-    name: "Social Media Auto-Posting",
-    description:
-      "Your social media manager that never sleeps. Schedule weeks of content in a spreadsheet, and watch it automatically publish to Instagram and Facebook at the perfect times—complete with hashtag research and image optimization.",
-    tools: ["n8n", "Google Sheets", "Instagram API", "Facebook Graph API", "Cron"],
-    impact: "Saves 6+ hours per week on social media management, ensures consistent posting schedule.",
-    type: "SME Client",
-    image: "/automation/n84.png",
-    longDescription:
-      "Content creators and marketing teams can finally plan their social media strategy without the daily grind. This workflow turns Google Sheets into a powerful content calendar. Simply add your posts with scheduled dates and times, and the automation handles the rest: downloading images from URLs, resizing them to platform-specific dimensions (Instagram: 1080x1080, Facebook: 1200x630), optimizing hashtags based on content analysis, and publishing at your specified times. Each platform gets customized content—different captions, hashtag strategies, and image formats. Post status and engagement metrics are automatically tracked back in your spreadsheet, giving you a complete view of your social media performance without leaving your workflow. Never miss a post, never worry about time zones, and never spend hours scheduling manually again.",
-    howToSetup: [
-      "Step 1: Google Sheets Content Calendar - Create a spreadsheet with columns: Date, Time (in your timezone), Platform (Instagram/Facebook/Both), Image URL (or Google Drive link), Caption, Hashtags (comma-separated), Status (Pending/Posted), Post URL. Fill in your content plan for weeks or months ahead.",
-      "Step 2: Schedule Automation Trigger - Add a 'Schedule Trigger' node in n8n, configured to run every hour (or every 30 minutes for more precision). This ensures posts go live at the exact scheduled time.",
-      "Step 3: Filter & Process Posts - Add a 'Google Sheets' node to read rows where Status is 'Pending' and current time matches the scheduled Time (within a 5-minute window). Use 'IF' or 'Filter' nodes to process only relevant posts.",
-      "Step 4: Image Processing - Add an 'HTTP Request' node to download images from URLs. Use a 'Function' node with image manipulation library (or external service) to resize images to platform requirements. Store processed images temporarily or upload to cloud storage (S3, Google Drive) for Instagram/Facebook API requirements.",
-      "Step 5: Platform-Specific Publishing - Configure separate 'HTTP Request' nodes for Instagram Graph API and Facebook Graph API. For Instagram, use the Media Creation API to upload image first, then publish container. Include caption with hashtags and mentions. For Facebook, use Page Posts API with image attachment.",
-      "Step 6: Status Updates & Tracking - After successful posting, use another 'Google Sheets' node to update the row: set Status to 'Posted', record Post URL, and add Timestamp. Optionally add engagement tracking by fetching post metrics after 24 hours and updating the spreadsheet."
-    ],
-    video: "https://www.youtube.com/watch?v=-Oc_HfreJJE",
-    docsLink: "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets/",
-    codeSnippet: `// Instagram post payload
-{
-  "image_url": "{{$json.image}}",
-  "caption": "{{$json.caption}} #{{$json.hashtags}}",
-  "access_token": "{{$env.IG_TOKEN}}"
-}`
-  },
-  {
-    id: "inventory-sync-alert",
-    name: "Inventory Sync & Low Stock Alert",
-    description:
-      "Stop losing sales to stockouts. This smart system watches your inventory across all channels, syncs everything in real-time, and screams at you (politely) when it's time to reorder—before your customers even notice.",
-    tools: ["n8n", "Shopify API", "WooCommerce API", "PostgreSQL", "Telegram", "Email"],
-    impact: "Prevents stockouts, reduces manual inventory checks by 80%, alerts team instantly.",
-    type: "Real Client Project",
-    image: "/automation/n85.png",
-    longDescription:
-      "Running a multi-channel e-commerce business means inventory chaos: products sell on Shopify, Amazon, WooCommerce, and your physical store simultaneously, but tracking stock levels manually is impossible. This automation solves that forever. Every 30 minutes, it syncs inventory counts from all your sales channels into a central PostgreSQL database, calculates total available stock, identifies discrepancies between platforms, and instantly alerts your team when any product drops below its reorder threshold. The system even suggests optimal reorder quantities based on historical sales velocity and calculates estimated time until stockout. Procurement gets formatted email reports with product names, current stock, reorder quantities, supplier information, and direct links to purchase orders. Never run out of your bestsellers again, and never waste time manually checking spreadsheets.",
-    howToSetup: [
-      "Step 1: API Credentials & Database Setup - Configure API credentials in n8n for Shopify (Admin API), WooCommerce (REST API), and any other platforms. Set up a PostgreSQL database with tables: products (SKU, name, current_stock, threshold, last_sync), inventory_history (timestamp, SKU, platform, quantity), and alerts_log (timestamp, SKU, message).",
-      "Step 2: Scheduled Sync Trigger - Add a 'Schedule Trigger' set to run every 30 minutes (adjust frequency based on your sales volume). For high-volume stores, consider 15-minute intervals.",
-      "Step 3: Multi-Platform Inventory Fetch - Create separate 'HTTP Request' nodes for each platform: Shopify Products API (get inventory_levels), WooCommerce Products API (get stock_quantity), Amazon Seller API (if applicable). Fetch all products and their current stock levels. Use 'Merge' nodes to combine data by SKU.",
-      "Step 4: Database Sync & Comparison - Add a 'PostgreSQL' node to update current_stock for each product. Use SQL queries to calculate total inventory across platforms and compare against reorder thresholds. Identify products where (current_stock <= threshold) AND (status != 'alerted_recently').",
-      "Step 5: Smart Alerting - For low-stock products, create formatted alerts with product name, current stock, days-until-stockout estimate (based on sales velocity), and suggested reorder quantity. Send to Telegram channel for instant visibility and email to procurement team with full details and supplier contact info.",
-      "Step 6: Audit Trail & Reconciliation - Log all sync operations to inventory_history table. Add error handling for API failures. Optionally add weekly reconciliation reports to identify inventory discrepancies between platforms."
+      "Bước 1: Thiết lập Cron hoặc Webhook trigger để quét các sản phẩm hot trend trên sàn affiliate.",
+      "Bước 2: Sử dụng OpenAI API để tạo tiêu đề, kịch bản video và prompt sinh hình ảnh phù hợp.",
+      "Bước 3: Gửi prompt qua DALL-E để tải ảnh về thư mục tạm, kết hợp gọi ElevenLabs/Google TTS để lấy file audio giọng đọc.",
+      "Bước 4: Sử dụng FFmpeg để ghép hình ảnh, âm thanh, nhạc nền và tạo hiệu ứng chuyển động/phụ đề tự động.",
+      "Bước 5: Gọi TikTok/YouTube API để upload video lên kênh và ghi lại báo cáo link video vào Google Sheets."
     ],
     video: "",
-    docsLink: "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.shopify/",
-    codeSnippet: `// Check stock threshold
-const lowStock = items.filter(item => 
-  item.quantity < item.threshold
-);
-if (lowStock.length > 0) {
-  return { lowStock, action: 'alert' };
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Cấu hình sinh video tự động
+{
+  "voice_model": "vi-VN-Standard-A",
+  "fps": 30,
+  "resolution": "1080x1920",
+  "duration_limit": 60
 }`
   },
   {
-    id: "support-ticket-router",
-    name: "Customer Support Ticket Router",
+    id: "competitor-scraper",
+    name: "Competitor Scraper & AI Content Analyzer",
     description:
-      "AI-powered ticket intelligence that reads, understands, and routes every customer issue to the perfect specialist in seconds—while VIP customers get the red carpet treatment automatically.",
-    tools: ["n8n", "Zendesk API", "OpenAI API", "Slack", "Airtable"],
-    impact: "Reduces ticket response time by 40%, ensures tickets reach correct specialist immediately.",
-    type: "Internal Project",
-    image: "/automation/n86.png",
-      longDescription:
-        "Customer support teams waste hours manually reading tickets, guessing categories, and routing them to the wrong people—while frustrated customers wait. This AI-powered automation changes everything. When a new ticket arrives in Zendesk, it instantly analyzes the content using OpenAI's GPT-4 to understand intent, sentiment, urgency, and category (billing questions, technical bugs, feature requests, account issues, etc.). The system checks customer tier (VIP customers get automatic escalation to senior agents), identifies keywords indicating high priority (like 'urgent', 'down', 'broke'), and intelligently routes the ticket to the right Slack channel with a beautifully formatted summary. Technical tickets go to engineering, billing questions to finance, feature requests to product, and critical issues immediately notify on-call teams. Every routing decision is logged in Airtable with reasoning, enabling continuous improvement. Customers get faster responses from the right experts, and your team spends less time triaging and more time solving.",
+      "Cào dữ liệu, phân tích và sao chép/tối ưu nội dung từ các video, kênh đối thủ cạnh tranh bằng AI để tìm ra công thức video triệu view.",
+    tools: ["Python", "Playwright", "n8n", "OpenAI API", "Google Sheets"],
+    impact: "Phát hiện nhanh xu hướng nội dung mới, tự động viết lại kịch bản tối ưu hơn đối thủ.",
+    type: "Marketing Intelligence",
+    image: "/automation/n82.png",
+    longDescription:
+      "Công cụ tự động theo dõi danh sách các kênh đối thủ. Khi phát hiện đối thủ có video mới tải lên, hệ thống sẽ tự động cào tiêu đề, mô tả và tải transcript (phụ đề giọng nói) của video đó. Nội dung thu được sẽ được chuyển qua GPT-4 để phân tích cấu trúc kịch bản (mở đầu, nội dung chính, kêu gọi hành động), tính điểm tiềm năng và viết lại thành 3 kịch bản mới độc đáo hơn.",
     howToSetup: [
-      "Step 1: Zendesk Webhook Integration - In Zendesk, create a webhook trigger for 'ticket.created' events. Configure the webhook URL to point to your n8n workflow's webhook node. Include ticket ID, subject, description, customer email, priority, and tags in the payload.",
-      "Step 2: Data Extraction & Enrichment - Add nodes to extract ticket content, customer information, and ticket metadata. Enrich customer data by looking up their tier/plan from your CRM or database. Combine all information into a structured payload for AI analysis.",
-      "Step 3: AI-Powered Analysis - Configure an 'OpenAI' node with GPT-4 model. Create a system prompt that instructs the AI to analyze the ticket and return: category (technical/billing/sales/support), sentiment (positive/neutral/negative/urgent), priority (low/medium/high/critical), suggested assignment, and reasoning. Use function calling or structured output for consistent JSON responses.",
-      "Step 4: Intelligent Routing Logic - Add conditional logic (IF/Switch nodes) based on AI analysis and customer tier. Route technical tickets to #engineering-support, billing to #finance-support, VIP customers to #vip-support, critical issues to #oncall-alerts. Include customer tier checks to auto-escalate VIP tickets regardless of category.",
-      "Step 5: Slack Notifications - Configure 'Slack' nodes for each channel. Format messages with ticket subject, customer name, AI-detected category and priority, ticket link, and key excerpt. Use Slack's rich formatting (threads, emojis, buttons) for better visibility. Include @mentions for high-priority tickets.",
-      "Step 6: Airtable Logging - Add an 'Airtable' node to log routing decisions with columns: Ticket ID, Timestamp, Category, Priority, Customer Tier, Routing Decision, AI Reasoning, Status. This creates an audit trail and enables analytics on routing accuracy.",
-      "Step 7: Customer Confirmation - Optionally add a node to send automated email to customer confirming ticket received and providing expected response time based on priority and category."
+      "Bước 1: Chạy script cào danh sách video mới từ kênh đối thủ định kỳ mỗi ngày bằng Playwright/Python.",
+      "Bước 2: Gửi link video mới qua n8n để trích xuất phụ đề tự động (YouTube Transcript API hoặc dùng Whisper).",
+      "Bước 3: Thiết lập OpenAI Node với Prompt phân tích chi tiết Hook và nội dung cốt lõi của đối thủ.",
+      "Bước 4: Sử dụng AI tạo ra các kịch bản cải tiến tương ứng và lưu trữ kết quả trực tiếp vào Google Sheets để duyệt."
     ],
-    video: "https://www.youtube.com/watch?v=5Q2eSTudxS4",
-    docsLink: "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.openai/",
-    codeSnippet: `// OpenAI analysis
-const analysis = await openai.chat({
-  model: "gpt-4",
-  messages: [
-    {
-      role: "system",
-      content: "Categorize support ticket..."
-    }
-  ]
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `# Python cào nhanh thông tin video đối thủ
+import yt_dlp
+def get_video_info(url):
+    with yt_dlp.YoutubeDL() as ydl:
+        return ydl.extract_info(url, download=False)`
+  },
+  {
+    id: "shopee-video-ads",
+    name: "Automated Shopee Product to Video Ads Creator",
+    description:
+      "Tự động tạo video quảng cáo ngắn từ link sản phẩm Shopee. Quét thông tin, ảnh sản phẩm, viết kịch bản quảng cáo và tự động dựng video.",
+    tools: ["Node.js", "Shopee Scraping API", "n8n", "FFmpeg", "ElevenLabs"],
+    impact: "Tiết kiệm 95% thời gian làm video quảng cáo, sản xuất hàng trăm video ads từ link sản phẩm chỉ trong vài phút.",
+    type: "E-commerce Tool",
+    image: "/automation/n83.png",
+    longDescription:
+      "Giải pháp hoàn hảo cho nhà bán hàng Dropshipping và Affiliate. Chỉ cần dán link sản phẩm Shopee, hệ thống tự động cào tên, giá, mô tả và tất cả các ảnh chất lượng cao của sản phẩm. Sau đó, AI sẽ đóng vai trò Copywriter để viết kịch bản bán hàng ngắn, tạo voice đọc thuyết minh và dùng FFmpeg dựng thành video dạng slideshow giới thiệu sản phẩm cực kỳ bắt mắt với hiệu ứng zoom và chuyển cảnh mượt mà.",
+    howToSetup: [
+      "Bước 1: Tạo webhook nhận link sản phẩm Shopee từ giao diện quản trị hoặc chatbot chat.",
+      "Bước 2: Dùng API cào dữ liệu để trích xuất danh sách ảnh, tên, giá bán và đánh giá nổi bật của sản phẩm.",
+      "Bước 3: Đưa thông tin vào OpenAI để sinh kịch bản quảng cáo ngắn trong 15-30 giây.",
+      "Bước 4: Chuyển kịch bản thành giọng nói tiếng Việt bằng ElevenLabs hoặc Google TTS.",
+      "Bước 5: Chạy FFmpeg tự động ghép hình ảnh sản phẩm chạy trên nền nhạc cùng file audio thuyết minh thành video thành phẩm."
+    ],
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Node.js mock API cào ảnh Shopee
+const getShopeeImages = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.item.images; // Trả về mảng link ảnh sản phẩm
+}`
+  },
+  {
+    id: "social-media-farmer",
+    name: "Multi-Account Social Media Farm Bot",
+    description:
+      "Hệ thống nuôi tài khoản Instagram, Facebook, TikTok tự động. Tách biệt môi trường trình duyệt và phân chia mỗi tài khoản chạy trên 1 IP riêng biệt để tránh quét.",
+    tools: ["Python", "Playwright", "Proxy Rotator", "Docker", "n8n"],
+    impact: "Duy trì hàng chục tài khoản mạng xã hội hoạt động tự nhiên như người dùng thật mà không bị khóa (shadowban).",
+    type: "Growth Hacking",
+    image: "/automation/n84.png",
+    longDescription:
+      "Hệ thống nuôi nick quy mô lớn. Bot tự động thực hiện các hành vi tương tác thường nhật như cuộn trang (scroll), xem Reels/TikTok ngẫu nhiên, thả tim (like), theo dõi (follow) các kênh cùng chủ đề và bình luận bằng AI. Mỗi luồng trình duyệt chạy biệt lập trong một container Docker và sử dụng proxy IPv4/IPv6 dân cư riêng biệt, mô phỏng hoàn hảo thao tác của con người để tăng độ uy tín cho tài khoản.",
+    howToSetup: [
+      "Bước 1: Cài đặt và cấu hình hệ thống Docker chạy các trình duyệt headless hoặc dùng công cụ antidetect browser.",
+      "Bước 2: Thiết lập proxy riêng cho mỗi trình duyệt thông qua tham số khởi tạo mạng của Playwright.",
+      "Bước 3: Lập lịch tương tác ngẫu nhiên qua n8n (ví dụ: nick A hoạt động từ 8h-9h, nick B hoạt động từ 10h-11h).",
+      "Bước 4: Tích hợp thư viện di chuyển chuột ngẫu nhiên và dùng OpenAI để sinh bình luận tự nhiên tùy theo nội dung bài đăng tương tác."
+    ],
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Cấu hình khởi tạo Playwright với proxy biệt lập
+const browser = await playwright.chromium.launch({
+  proxy: {
+    server: "http://proxy.rotator-provider.com:8000",
+    username: "user123",
+    password: "pass123"
+  }
 });`
   },
   {
-    id: "data-backup-archive",
-    name: "Automated Data Backup & Archive",
+    id: "fb-auto-chatbot",
+    name: "Auto FB Poster & AI Comment/Message Chatbot",
     description:
-      "Your digital safety net. Every night while you sleep, this system backs up everything important to multiple cloud locations, keeps decades of history organized, and ensures you never lose critical data—ever.",
-    tools: ["n8n", "Cron", "PostgreSQL", "AWS S3", "Google Drive API", "Email"],
-    impact: "Ensures 99.9% data safety, automates compliance requirements, saves storage costs via smart archiving.",
-    type: "Real Client Project",
-    image: "/automation/n87.png",
+      "Tự động đăng bài lên Fanpage/Group Facebook. Tự động phản hồi bình luận bằng AI và nhắn tin trực tiếp (inbox) chốt đơn cho khách hàng 24/7.",
+    tools: ["Facebook Graph API", "NestJS", "n8n", "OpenAI API", "Messenger Webhooks"],
+    impact: "Tương tác tức thì 100% với khách hàng, tăng tỷ lệ chuyển đổi từ bình luận sang inbox chốt đơn.",
+    type: "Customer Support Automation",
+    image: "/automation/n85.png",
     longDescription:
-      "Data loss can destroy a business in minutes, but proper backup strategies are complex, expensive, and often forgotten. This enterprise-grade automation runs silently in the background, performing full database backups every night and incremental backups throughout the day. It creates compressed, encrypted backups with timestamps, uploads them simultaneously to AWS S3 (for durability) and Google Drive (for accessibility), and automatically moves older backups to cheaper cold storage (S3 Glacier) based on retention policies (e.g., keep 30 days in hot storage, 1 year in warm, 7 years in cold). The system verifies backup integrity, sends daily status reports to IT teams, and alerts immediately if any backup fails. Perfect for compliance requirements (GDPR, HIPAA), disaster recovery planning, and businesses that can't afford to lose a single byte of data.",
+      "Giải pháp tự động hóa phễu bán hàng trên Facebook. Hệ thống tự động đăng các bài viết đã lên lịch sẵn. Khi có khách hàng bình luận, Webhook sẽ gửi thông tin về server NestJS, AI tự động phân tích và phản hồi bình luận của khách hàng một cách thân thiện. Đồng thời, bot tự động gửi tin nhắn trực tiếp qua Messenger kèm nút chốt đơn để chuyển đổi khách hàng tiềm năng ngay lập tức.",
     howToSetup: [
-      "Step 1: Infrastructure Setup - Configure database connection credentials in n8n for PostgreSQL (and any other databases). Set up AWS S3 bucket with appropriate IAM policy (read/write access, lifecycle policies for archiving). Create Google Drive folder structure for backups. Set up email credentials for notifications.",
-      "Step 2: Backup Schedule Configuration - Add a 'Schedule Trigger' node set to run daily at 2:00 AM (low-traffic window). Optionally add additional triggers for incremental backups (every 6 hours) using separate workflows.",
-      "Step 3: Database Backup Execution - Add an 'Execute Command' or 'HTTP Request' node to run pg_dump command: 'pg_dump -h $HOST -U $USER -d $DB_NAME -F c -f backup_$(date +%Y%m%d_%H%M%S).dump'. For incremental backups, use pg_basebackup or WAL archiving. Capture output and verify dump file size > 0.",
-      "Step 4: File Compression & Encryption - Add a 'Function' node to compress backup files using gzip (or 7zip for better compression). Optionally encrypt backups using GPG or AES-256 before uploading. Add timestamp and metadata to filename.",
-      "Step 5: Multi-Cloud Upload - Configure parallel 'HTTP Request' nodes for AWS S3 (using S3 API with multipart upload for large files) and Google Drive API (using resumable upload). Upload simultaneously for redundancy. Include retry logic for failed uploads.",
-      "Step 6: Lifecycle & Archiving - Add logic to check backup age. If backup is older than 30 days, move from S3 Standard to S3 Glacier using AWS API. If older than 1 year, move to S3 Glacier Deep Archive. Update Google Drive folder structure accordingly. Maintain index of all backups with metadata in a tracking database.",
-      "Step 7: Verification & Reporting - After upload, verify file integrity (checksums). Query backup status from both S3 and Google Drive. Generate daily email report with: backup size, upload status, storage locations, any errors, retention policy actions. Include weekly summary with storage costs."
+      "Bước 1: Đăng ký ứng dụng Meta Developer, liên kết Fanpage và cấu hình Webhook nhận sự kiện comment/message.",
+      "Bước 2: Dựng server NestJS nhận payload sự kiện và chuyển tiếp sang n8n để xử lý logic.",
+      "Bước 3: Gọi OpenAI API phân tích nội dung câu hỏi của khách hàng dựa trên file tài liệu sản phẩm cung cấp sẵn.",
+      "Bước 4: Gọi Facebook Send API để trả lời bình luận công khai và gửi tin nhắn ẩn vào inbox khách hàng."
     ],
     video: "",
-    docsLink: "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/",
-    codeSnippet: `# Backup script
-pg_dump -h $DB_HOST -U $DB_USER $DB_NAME | \\
-  gzip > backup_$(date +%Y%m%d).sql.gz
-
-# Upload to S3
-aws s3 cp backup_*.sql.gz s3://backup-bucket/`
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Trả lời tin nhắn khách hàng tự động
+const sendFBMessage = async (recipientId, text) => {
+  return await fetch("https://graph.facebook.com/v18.0/me/messages?access_token=" + PAGE_TOKEN, {
+    method: "POST",
+    body: JSON.stringify({ recipient: { id: recipientId }, message: { text } })
+  });
+}`
   },
   {
-    id: "order-fulfillment-workflow",
-    name: "E-commerce Order Fulfillment Workflow",
+    id: "sub-voice-transcriber",
+    name: "AI Speech-to-Text & Subtitle Generator",
     description:
-      "From 'Order Placed' to 'Out for Delivery' in minutes—not hours. This end-to-end automation handles everything: inventory checks, label printing, customer updates, and analytics, so your team can focus on growing the business instead of packing boxes.",
-    tools: ["n8n", "Shopify", "WooCommerce", "ShipStation API", "Email", "SMS"],
-    impact: "Reduces order processing time from 2 hours to 15 minutes, eliminates human errors, improves customer satisfaction.",
-    type: "SME Client",
+      "Tự động chuyển giọng nói thành văn bản, tự động dịch thuật và làm phụ đề (sub) cho truyện tranh, video và các tệp âm thanh.",
+    tools: ["Whisper API", "FFmpeg", "n8n", "Python", "Google Drive"],
+    impact: "Sản xuất phụ đề video nhanh gấp 10 lần so với làm thủ công, hỗ trợ dịch thuật đa ngôn ngữ.",
+    type: "Content Localization",
+    image: "/automation/n86.png",
+    longDescription:
+      "Hệ thống tự động hóa khâu làm phụ đề. Khi tải video/audio lên thư mục Google Drive, hệ thống sẽ tự động tách âm thanh, gửi file audio qua mô hình Whisper AI để nhận diện giọng nói và xuất ra file văn bản có chứa mốc thời gian (timestamp). Hệ thống tiếp tục dịch file phụ đề sang ngôn ngữ đích và dùng FFmpeg để ép phụ đề cứng trực tiếp vào video thành phẩm.",
+    howToSetup: [
+      "Bước 1: Cấu hình n8n trigger theo dõi sự kiện thêm mới file video trong thư mục Google Drive chỉ định.",
+      "Bước 2: Sử dụng lệnh Python/FFmpeg trên server để chuyển đổi video thành file âm thanh chất lượng nhẹ.",
+      "Bước 3: Gửi file âm thanh qua OpenAI Whisper API hoặc API nhận dạng giọng nói cục bộ để lấy dữ liệu text kèm timeline.",
+      "Bước 4: Định dạng dữ liệu text thành file .srt hoặc .vtt. Chạy script FFmpeg để ghép phụ đề cứng vào video gốc."
+    ],
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `# Command FFmpeg ghép cứng phụ đề vào video
+ffmpeg -i video_goc.mp4 -vf subtitles=phude.srt video_output.mp4`
+  },
+  {
+    id: "wp-seo-poster",
+    name: "Auto WordPress Poster & SEO Optimizer",
+    description:
+      "Tự động tạo nội dung (bài viết) chuẩn SEO dựa trên từ khóa hạt giống và tự động đăng bài lên website WordPress, tối ưu hóa thẻ heading, mô tả và alt ảnh.",
+    tools: ["n8n", "WordPress REST API", "OpenAI API", "Yoast SEO API", "Cron"],
+    impact: "Duy trì tần suất đăng bài chuẩn SEO đều đặn, tiết kiệm chi phí thuê biên tập viên nội dung.",
+    type: "SEO & CMS Automation",
+    image: "/automation/n87.png",
+    longDescription:
+      "Hệ thống tự động phát triển nội dung SEO cho website. Từ khóa mục tiêu được lập lịch định kỳ để chuyển tới OpenAI tạo bài viết hoàn chỉnh với cấu trúc chuẩn SEO (H1, H2, H3, mật độ từ khóa hợp lý). Hệ thống tự động liên kết ảnh minh họa, tối ưu thẻ alt ảnh và thẻ meta description thông qua tích hợp Yoast SEO trước khi gọi API WordPress để đăng trực tiếp lên web.",
+    howToSetup: [
+      "Bước 1: Thiết lập một Google Sheet chứa danh sách từ khóa cần viết bài và lịch đăng cụ thể.",
+      "Bước 2: Sử dụng n8n để đọc từ khóa cần đăng của ngày hôm đó, gửi yêu cầu tới OpenAI để viết bài chuẩn SEO.",
+      "Bước 3: Phân tích cấu trúc HTML của bài viết bằng node Code trong n8n để chèn thẻ meta, alt ảnh tự động.",
+      "Bước 4: Gọi API WordPress REST để tạo bài viết mới ở trạng thái 'Publish' hoặc 'Draft' tùy cấu hình."
+    ],
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Tạo bài viết mới lên WordPress qua REST API
+const createWPost = async (title, content) => {
+  return await fetch("https://mywebsite.com/wp-json/wp/v2/posts", {
+    method: "POST",
+    headers: { "Authorization": "Basic " + WP_APPLICATION_PASSWORD },
+    body: JSON.stringify({ title, content, status: "publish" })
+  });
+}`
+  },
+  {
+    id: "bulk-email-sender",
+    name: "Bulk Smart Email Campaign Sender",
+    description:
+      "Hệ thống gửi email tự động và đồng loạt. Tự động kiểm tra tính hợp lệ của email nhận, cấu hình xoay tua máy chủ gửi (SMTP) và theo dõi phản hồi.",
+    tools: ["n8n", "SMTP/IMAP", "Google Sheets", "Telegram", "Cron"],
+    impact: "Gửi hàng ngàn email cá nhân hóa mỗi ngày mà không bị đánh dấu spam, kiểm soát tỷ lệ bounce rate dưới 2%.",
+    type: "Lead Generation",
     image: "/automation/n88.png",
     longDescription:
-      "E-commerce fulfillment is a complex dance: orders come from Shopify, your website, Amazon, and marketplaces simultaneously. Each order needs inventory validation (is it in stock?), allocation (reserve it before someone else buys it), shipping label generation (which carrier? what service level?), status updates across platforms, customer notifications (email + SMS), and inventory reconciliation. Do this manually and you'll have errors, delays, and unhappy customers. This automation orchestrates the entire process flawlessly. When an order arrives, it instantly checks real-time inventory across all channels, reserves items to prevent overselling, calculates shipping costs, generates professional shipping labels via ShipStation (with automatic carrier selection based on weight and destination), updates order status everywhere (Shopify, WooCommerce, your ERP), sends beautiful confirmation emails with order details and estimated delivery, dispatches SMS tracking notifications when items ship, and logs everything to your analytics database for performance insights. Your fulfillment team just needs to pack and ship—the automation handles everything else.",
+      "Hệ thống quản lý chiến dịch email marketing thông minh. Hệ thống tự động đọc danh sách khách hàng từ Google Sheets, chạy qua bộ lọc làm sạch email để loại bỏ email ảo. Khi gửi bài, hệ thống tự động xoay tua giữa nhiều tài khoản SMTP gửi khác nhau để phân phối tải và tăng độ uy tín. Đồng thời, bot IMAP liên tục lắng nghe hòm thư đến để phát hiện phản hồi của khách hàng và báo về Telegram.",
     howToSetup: [
-      "Step 1: Webhook Configuration - Set up webhooks in Shopify (Order Created event) and WooCommerce (Order Status Changed to Processing). Configure webhook URLs to point to your n8n workflow's webhook trigger nodes. Include order details, customer info, line items, and shipping address in payload.",
-      "Step 2: Inventory Validation - Add nodes to check real-time inventory for each line item. Query your inventory management system (database, ERP, or multi-channel sync service). If any item is out of stock, automatically update order status to 'On Hold' and notify customer. If in stock, proceed to reservation.",
-      "Step 3: Inventory Reservation - Before generating shipping label, reserve items in your inventory system to prevent overselling during fulfillment window (typically 2-4 hours). Use atomic operations or locks to ensure thread safety across concurrent orders. Update available stock immediately.",
-      "Step 4: Shipping Label Generation - Configure 'HTTP Request' node for ShipStation API. Prepare label request with: order weight, dimensions, origin/destination addresses, service level (ground/express), carrier preferences. Call ShipStation 'Create Label' endpoint. Retrieve tracking number and label image URL.",
-      "Step 5: Multi-Platform Status Updates - Update order status in source platform (Shopify: 'Fulfilled', WooCommerce: 'Completed') using respective APIs. Include tracking number, carrier name, and estimated delivery date. If order exists in multiple channels, update all simultaneously.",
-      "Step 6: Customer Communications - Send beautifully formatted confirmation email with order summary, item details, shipping address, tracking number, and expected delivery date. Use email template service (SendGrid, Mailgun) or HTML templates. Then send SMS notification with tracking link using Twilio or similar service.",
-      "Step 7: Inventory Reconciliation - After label generation, update inventory levels across all sales channels. Decrease stock count in Shopify, WooCommerce, and central database. If using multi-channel inventory sync, trigger sync process.",
-      "Step 8: Analytics & Logging - Log order details to analytics database with columns: Order ID, Channel, Items, Customer, Revenue, Shipping Cost, Fulfillment Time, Tracking Number, Status, Timestamp. Enable reporting on fulfillment speed, error rates, and customer satisfaction."
+      "Bước 1: Chuẩn bị tệp data khách hàng và các mẫu nội dung email cá nhân hóa trong Google Sheets.",
+      "Bước 2: Tạo n8n workflow gửi email theo từng lô (batch) để hạn chế spam, thiết lập thời gian trễ ngẫu nhiên.",
+      "Bước 3: Cấu hình các tài khoản SMTP gửi khác nhau trong node Send Email để xoay tua luân phiên.",
+      "Bước 4: Thêm node IMAP Trigger theo dõi email phản hồi từ khách hàng để gửi cảnh báo trực tiếp về Telegram nhóm chăm sóc khách hàng."
     ],
-    video: "https://www.youtube.com/watch?v=VcFbPT4H0bs",
-    docsLink: "https://docs.n8n.io/workflows/best-practices/",
-    codeSnippet: `// ShipStation label request
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Gửi mail cá nhân hoá với n8n node
 {
-  "orderId": "{{$json.order_id}}",
-  "carrierCode": "fedex",
-  "serviceCode": "fedex_ground",
-  "shipDate": "{{$now}}"
+  "to": "{{$json.LeadEmail}}",
+  "subject": "Chào {{$json.LeadName}}, giải pháp tự động hoá cho {{$json.CompanyName}}",
+  "html": "<p>Chào bạn, chúng tôi có giải pháp...</p>"
+}`
+  },
+  {
+    id: "ocr-invoice-scanner",
+    name: "OCR Invoice to Excel Centralized Scanner",
+    description:
+      "Quét thông tin hóa đơn tự động từ ảnh chụp hoặc file PDF bằng công nghệ AI OCR, tự động bóc tách các trường thông tin và xuất ra file Excel tổng.",
+    tools: ["n8n", "IMAP", "OpenAI API", "Telegram", "Google Sheets"],
+    impact: "Tiết kiệm 90% thời gian nhập liệu hóa đơn thủ công cho kế toán, giảm thiểu sai sót sai số xuống 0%.",
+    type: "Financial Automation",
+    image: "/automation/n81.png",
+    longDescription:
+      "Trợ lý kế toán ảo hoạt động 24/7. Hệ thống tự động giám sát hòm thư kế toán thông qua IMAP. Khi nhận được email đính kèm hóa đơn dạng hình ảnh hoặc file PDF, hệ thống sẽ tải file về và chuyển tiếp qua API AI OCR (GPT-4 Vision hoặc Google Vision) để phân tích văn bản, bóc tách các chỉ số cốt lõi như tên nhà cung cấp, mã số thuế, ngày hóa đơn, tổng tiền, thuế suất và tự động lưu vào file Excel quản lý chung.",
+    howToSetup: [
+      "Bước 1: Thiết lập IMAP email trigger theo dõi hòm thư nhận hóa đơn đầu vào.",
+      "Bước 2: Tách lấy file đính kèm (PDF/Ảnh) chuyển thành định dạng nhị phân (binary data).",
+      "Bước 3: Gửi file qua OpenAI API (sử dụng GPT-4o vision) với prompt yêu cầu bóc tách dữ liệu hóa đơn thành JSON chuẩn.",
+      "Bước 4: Nhận kết quả JSON, ghi dữ liệu vào Google Sheets/Excel và bắn tin nhắn tổng hợp doanh số hóa đơn về Telegram."
+    ],
+    video: "",
+    docsLink: "https://docs.n8n.io/",
+    codeSnippet: `// Schema kết quả bóc tách hóa đơn JSON
+{
+  "mst_nha_ban": "0102030405",
+  "ngay_hoa_don": "2026-07-06",
+  "tong_tien_chua_thue": 5000000,
+  "thue_suat": 0.1,
+  "tong_tien_thanh_toan": 5500000
 }`
   }
 ];
@@ -719,13 +734,27 @@ export const toolColors = {
   Email: "#ea4335",
   SMS: "#34c759",
   "ShipStation API": "#00a8e8",
+  Python: "#3572A5",
+  Playwright: "#2e8555",
+  FFmpeg: "#0078d7",
+  ElevenLabs: "#f97316",
+  Docker: "#2496ed",
+  "SMTP/IMAP": "#1083c8",
+  "Shopee Scraping API": "#ee4d2d",
+  "Proxy Rotator": "#ff9900",
 };
 
 // Type badge colors for automation projects
 export const typeBadgeColors = {
-  "SME Client": "bg-green-100 text-green-800 border-green-400",
-  "Internal Project": "bg-blue-100 text-blue-800 border-blue-400",
-  "Real Client Project": "bg-orange-100 text-orange-800 border-orange-300",
+  "Social Media Automation": "bg-pink-100 text-pink-800 border-pink-400",
+  "Marketing Intelligence": "bg-purple-100 text-purple-800 border-purple-400",
+  "E-commerce Tool": "bg-yellow-100 text-yellow-800 border-yellow-400",
+  "Growth Hacking": "bg-red-100 text-red-800 border-red-400",
+  "Customer Support Automation": "bg-blue-100 text-blue-800 border-blue-400",
+  "Content Localization": "bg-teal-100 text-teal-800 border-teal-400",
+  "SEO & CMS Automation": "bg-indigo-100 text-indigo-800 border-indigo-400",
+  "Lead Generation": "bg-cyan-100 text-cyan-800 border-cyan-400",
+  "Financial Automation": "bg-emerald-100 text-emerald-800 border-emerald-400",
 };
 
 // EmailJS configuration
