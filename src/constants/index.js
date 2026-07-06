@@ -178,6 +178,16 @@ const experiences = [
       "Worked collaboratively in a team to deliver features on schedule and resolve technical challenges.",
     ],
   },
+  {
+    title: "IT Support",
+    company_name: "IT Support + Chinh Nguyen Computer",
+    icon: CN,
+    iconBg: "#E6DEDD",
+    date: "Sep 2022 - Nov 2024",
+    points: [
+      "2+ years of hands-on experience in IT support, system setup, troubleshooting, and basic development environment configuration.",
+    ],
+  },
 ];
 
 const testimonials = [
