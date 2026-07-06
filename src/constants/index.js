@@ -80,7 +80,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Fronted Developer",
+    title: "AI & Automation Specialist",
     icon: creator,
   },
 ];
@@ -176,16 +176,6 @@ const experiences = [
       "Designed and consumed RESTful APIs to support core business logic and data flow.",
       "Enhanced front-end responsiveness and usability to improve the customer shopping experience.",
       "Worked collaboratively in a team to deliver features on schedule and resolve technical challenges.",
-    ],
-  },
-  {
-    title: "IT Support",
-    company_name: "IT Support + Chinh Nguyen Computer",
-    icon: CN,
-    iconBg: "#E6DEDD",
-    date: "Sep 2022 - Nov 2024",
-    points: [
-      "2+ years of hands-on experience in IT support, system setup, troubleshooting, and basic development environment configuration.",
     ],
   },
 ];
@@ -418,7 +408,7 @@ const projects = [
     ],
     image: lamda,
     source_code_link: "https://github.com/AnhBoHelloTeam",
-    live_demo_link: "https://github.com/AnhBoHelloTeam",
+    live_demo_link: "https://www.lumionix.com/",
   },
   {
     name: "Flutter Mobile App",
