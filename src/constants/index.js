@@ -276,6 +276,33 @@ const projects = [
     live_demo_link: "https://vluxai.com/",
   },
   {
+    name: "Karimi Dry Food | Vegetarian Landing Page",
+    description:
+      "A premium, highly responsive landing page showcasing healthy vegetarian and organic dry foods. Features clean layout designs, smooth performance, and optimized search engine visibility.",
+    tags: [
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "seo", color: "green-text-gradient" },
+      { name: "responsive", color: "pink-text-gradient" },
+    ],
+    image: "/karimidryfood.png",
+    source_code_link: "",
+    live_demo_link: "https://karimidryfood.vluxai.com/",
+  },
+  {
+    name: "AlgoBattle | 1v1 Coding Platform",
+    description:
+      "A real-time competitive programming arena. Features automated secure code execution sandbox (judge node), dynamic Elo matchmaking pool via Redis, real-time WebSocket communication, and Elo calculations with rank protection shields.",
+    tags: [
+      { name: "reactjs", color: "blue-text-gradient" },
+      { name: "nestjs", color: "green-text-gradient" },
+      { name: "redis", color: "pink-text-gradient" },
+      { name: "socketio", color: "blue-text-gradient" },
+    ],
+    image: "/algobattle.png",
+    source_code_link: "",
+    live_demo_link: "https://www.algobattle.site/",
+  },
+  {
     name: "Soho Nails | Salon Website",
     description:
       "A salon website with multi-branch pages, service lists, pricing, and booking/contact info. Focused on clean design, readability, and SEO content structure.",
@@ -393,7 +420,6 @@ const projects = [
     source_code_link: "https://github.com/AnhBoHelloTeam",
     live_demo_link: "https://github.com/AnhBoHelloTeam",
   },
-  
   {
     name: "Flutter Mobile App",
     description:
@@ -437,33 +463,6 @@ const projects = [
     image: terms,
     source_code_link: "https://github.com/AnhBoHelloTeam/123fakturera_FE.git",
     live_demo_link: "https://one23fakturera-fe.onrender.com",
-  },
-  {
-    name: "Karimi Dry Food | Vegetarian Landing Page",
-    description:
-      "A premium, highly responsive landing page showcasing healthy vegetarian and organic dry foods. Features clean layout designs, smooth performance, and optimized search engine visibility.",
-    tags: [
-      { name: "nextjs", color: "blue-text-gradient" },
-      { name: "seo", color: "green-text-gradient" },
-      { name: "responsive", color: "pink-text-gradient" },
-    ],
-    image: "/karimidryfood.png",
-    source_code_link: "",
-    live_demo_link: "https://karimidryfood.vluxai.com/",
-  },
-  {
-    name: "AlgoBattle | 1v1 Coding Platform",
-    description:
-      "A real-time competitive programming arena. Features automated secure code execution sandbox (judge node), dynamic Elo matchmaking pool via Redis, real-time WebSocket communication, and Elo calculations with rank protection shields.",
-    tags: [
-      { name: "reactjs", color: "blue-text-gradient" },
-      { name: "nestjs", color: "green-text-gradient" },
-      { name: "redis", color: "pink-text-gradient" },
-      { name: "socketio", color: "blue-text-gradient" },
-    ],
-    image: "/algobattle.png",
-    source_code_link: "",
-    live_demo_link: "https://www.algobattle.site/",
   },
 ];
 
