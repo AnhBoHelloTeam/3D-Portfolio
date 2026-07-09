@@ -770,8 +770,8 @@ export const clientWebProjects = [
   {
     id: "ht-nails",
     name: "HT Nails",
-    url: "https://soho.vluxai.com/",
-    domain: "soho.vluxai.com",
+    url: "https://htnails.com.au/",
+    domain: "htnails.com.au",
     image: "https://vluxai.com/wp-content/uploads/2025/12/soho.vluxai.com_-1-scaled.png",
     transform: "perspective(1200px) rotateY(-12deg) translateZ(0)",
     shadow: "0 30px 80px rgba(102, 126, 234, 0.4), 0 0 40px rgba(79, 172, 254, 0.3)",
