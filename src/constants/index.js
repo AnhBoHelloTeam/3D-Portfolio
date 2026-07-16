@@ -127,7 +127,7 @@ const experiences = [
   {
     title: "Front-End Developer (Remote)",
     company_name: "HighScores.ai",
-    url: "https://highscores.ai/",
+    url: "https://next.practiz.xyz/",
     icon: highscores,
     iconBg: "#E6DEDD",
     date: "July 2025 - November 2025",
